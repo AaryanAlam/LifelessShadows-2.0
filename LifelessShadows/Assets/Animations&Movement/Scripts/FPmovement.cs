@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class FPmovement : MonoBehaviour
 {
+    public AudioSource source;
+    public AudioClip walking;
    public float speed = 5f;
     public float jumpSpeed = 5f;
     public float gravity = -9.81f;
     public float crouchHeight = 1f;
     public float lookSensitivity = 2f;
     private float _originalHeight;
+    public bool j = true;
 
     private CharacterController _controller;
     public Transform _camera;
@@ -30,6 +33,7 @@ public class FPmovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         _controller.Move(move * speed * Time.deltaTime);
+            
 
         if (_controller.isGrounded && Input.GetButtonDown("Jump"))
         {
@@ -55,6 +59,9 @@ public class FPmovement : MonoBehaviour
         }
         else 
         {
+            source.clip = walking;
+            source.loop = true;
+            source.Play();
             speed = 5;
         }
 
