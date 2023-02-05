@@ -6,6 +6,8 @@ public class FlashLightOffOn : MonoBehaviour
 {
     public Light spotLight;
     public Light pointLight;
+    public AudioSource source;
+    public AudioClip ding;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,7 @@ public class FlashLightOffOn : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
+            source.PlayOneShot(ding);
             spotLight.enabled = !spotLight.enabled;
             pointLight.enabled = !pointLight.enabled;
         }
