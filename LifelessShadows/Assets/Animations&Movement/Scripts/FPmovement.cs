@@ -48,7 +48,15 @@ public class FPmovement : MonoBehaviour
             _controller.height = _originalHeight;
             speed = 5;
         }
-
+        
+        if (Input.GetKey(KeyCode.LeftShift)) 
+        {
+            speed = 7.5f;
+        }
+        else 
+        {
+            speed = 5;
+        }
 
         // first-person look
         float mouseX = Input.GetAxis("Mouse X") * lookSensitivity;
