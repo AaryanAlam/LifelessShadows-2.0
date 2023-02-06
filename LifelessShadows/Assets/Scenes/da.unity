@@ -128,6 +128,93 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1450602116203488, guid: 40b7e4c60e2fd894c8e2ce3afdeb1759, type: 3}
   m_PrefabInstance: {fileID: 1827308940}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &291953776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 291953778}
+  - component: {fileID: 291953777}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &291953777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291953776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8e1e15f285a754294c952517b8b73f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Walking
+    clip: {fileID: 8300000, guid: 834e7ece4abddd841966a379ef179c13, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Hurt1
+    clip: {fileID: 8300000, guid: c731d9b787e2cf74581f0d7296fd5afb, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Hurt2
+    clip: {fileID: 8300000, guid: 7dfea757d61b86e41b1adc94e969ab6c, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Breathing
+    clip: {fileID: 8300000, guid: a2bd18f4f31e3fc45967f700fda3133b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: LightSwitch
+    clip: {fileID: 8300000, guid: 5314b996f6631174ba33e2ecc8168cb7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LightBuzz
+    clip: {fileID: 8300000, guid: 56a91dc9eac3c994ba5dd54eb740dc49, type: 3}
+    volume: 1
+    pitch: 0.75
+    loop: 1
+    source: {fileID: 0}
+  - name: Enemy
+    clip: {fileID: 8300000, guid: b13fc7ebe70ce0345a6bf4f7cfa3b291, type: 3}
+    volume: 1
+    pitch: 0.75
+    loop: 1
+    source: {fileID: 0}
+--- !u!4 &291953778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291953776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 154.01483, y: 27.17138, z: 341.77213}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028176266
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54564bfa98aa8cc4482445c1194edb5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 5866666021610549201}
+  walking1: {fileID: 8300000, guid: 834e7ece4abddd841966a379ef179c13, type: 3}
 --- !u!114 &2011675289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,7 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 5866666021610549201}
-  walking: {fileID: 8300000, guid: 993801f115cd97b4280218d0ad97df0a, type: 3}
+  walking: {fileID: 8300000, guid: 834e7ece4abddd841966a379ef179c13, type: 3}
   speed: 5
   jumpSpeed: 5
   gravity: -9.81
@@ -2268,7 +2357,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a2bd18f4f31e3fc45967f700fda3133b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7cee9d75c8f56934d8cd9982a14b8d1f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2314,7 +2403,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

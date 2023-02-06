@@ -11,7 +11,7 @@ public class FlashLightOffOn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<AudioManager>().Play("LightBuzz");
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class FlashLightOffOn : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            source.PlayOneShot(ding);
+            FindObjectOfType<AudioManager>().Play("LightSwitch");
             spotLight.enabled = !spotLight.enabled;
             pointLight.enabled = !pointLight.enabled;
         }

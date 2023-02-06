@@ -7,7 +7,8 @@ public class PlayerAnimations : MonoBehaviour
 {
     Animator animator;
 
-
+    public AudioSource source;
+    public AudioClip walking1;
 
     int isWalkingHash;
     int isStrafeRHash;
@@ -55,6 +56,7 @@ public class PlayerAnimations : MonoBehaviour
         if (!isWalking && forwardPressed)
         {
             animator.SetBool("isWalking", true);
+            FindObjectOfType<AudioManager>().Play("Walking");
         }
         if (isWalking && !forwardPressed)
         {
@@ -64,6 +66,7 @@ public class PlayerAnimations : MonoBehaviour
         if (!isBack && backPressed)
         {
             animator.SetBool("isBack", true);
+            FindObjectOfType<AudioManager>().Play("Walking");
         }
         if (isBack && !backPressed)
         {
@@ -89,6 +92,7 @@ public class PlayerAnimations : MonoBehaviour
         if (!isStrafeR && rightPressed)
         {
             animator.SetBool("isStrafeR", true);
+            FindObjectOfType<AudioManager>().Play("Walking");
         }
         if (isStrafeR && !rightPressed)
         {
@@ -97,6 +101,7 @@ public class PlayerAnimations : MonoBehaviour
         if (!isStrafeL && leftPressed)
         {
             animator.SetBool("isStrafeL", true);
+            FindObjectOfType<AudioManager>().Play("Walking");
         }
         if (isStrafeL && !leftPressed)
         {
