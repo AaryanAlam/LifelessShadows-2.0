@@ -20,7 +20,7 @@ public class Health : MonoBehaviour
         if (Input.anyKeyDown)
         {
             health = health - 1;
-            
+            fill.value = fill.value - 1;
         }
     }
 }
