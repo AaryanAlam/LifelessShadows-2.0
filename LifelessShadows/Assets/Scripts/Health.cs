@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     public int health = 100;
     public GameObject playerPrefab;
     public GameObject spawn;
-
+    public GameManager gameManager;
 
     private void Awake()
     {
@@ -25,14 +25,13 @@ public class Health : MonoBehaviour
             fill.value = health;
         }
 
-        if (health <= 0)
+        if (gameManager.reset = false && health <= 0)
         {
-            health = 0;
-
-            
+            gameManager.ResetGame();
         }
-    }
 
+    }
+    
 
 }
 

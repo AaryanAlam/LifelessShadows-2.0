@@ -13,6 +13,7 @@ public class FPmovement : MonoBehaviour
     public float lookSensitivity = 2f;
     private float _originalHeight;
     public bool j = true;
+    public GameManager gameManager;
 
     private CharacterController _controller;
     public Transform _camera;
@@ -42,8 +43,10 @@ public class FPmovement : MonoBehaviour
         {
             _controller.Move(Vector3.up * jumpSpeed * Time.deltaTime);
         }
-
-        _controller.Move(Vector3.up * gravity * Time.deltaTime);
+        while (gameManager.reset == false)
+        {
+            _controller.Move(Vector3.up * gravity * Time.deltaTime);
+        }
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
