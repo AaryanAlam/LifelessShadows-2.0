@@ -24,6 +24,9 @@ public class FPmovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+    private void Awake() {
+
+    }
 
     void Update()
     {

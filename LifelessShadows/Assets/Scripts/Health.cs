@@ -8,19 +8,31 @@ public class Health : MonoBehaviour
 {
     public Slider fill;
     public int health = 100;
-    // Start is called before the first frame update
-    void Start()
+    public GameObject playerPrefab;
+    public GameObject spawn;
+
+
+    private void Awake()
     {
-        
+        health = 100;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.anyKeyDown)
         {
-            health = health - 1;
-            fill.value = fill.value - 1;
+            health -= 1;
+            fill.value = health;
+        }
+
+        if (health <= 0)
+        {
+            health = 0;
+
+            
         }
     }
+
+
 }
+
