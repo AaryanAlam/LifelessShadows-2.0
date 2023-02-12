@@ -43,10 +43,12 @@ public class FPmovement : MonoBehaviour
         {
             _controller.Move(Vector3.up * jumpSpeed * Time.deltaTime);
         }
-        while (gameManager.reset == false)
+        
+        if (gameManager.reset == false)
         {
             _controller.Move(Vector3.up * gravity * Time.deltaTime);
         }
+
 
         if (Input.GetKey(KeyCode.LeftControl))
         {

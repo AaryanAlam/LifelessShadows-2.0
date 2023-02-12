@@ -25,8 +25,9 @@ public class Health : MonoBehaviour
             fill.value = health;
         }
 
-        if (gameManager.reset = false && health <= 0)
+        if (health <= 0)
         {
+            Debug.Log("Went through");
             gameManager.ResetGame();
         }
 
