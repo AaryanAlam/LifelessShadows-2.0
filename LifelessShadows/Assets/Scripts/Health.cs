@@ -19,11 +19,7 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        if (Input.anyKeyDown)
-        {
-            health -= 1;
-            fill.value = health;
-        }
+        fill.value = health;
 
         if (health <= 0)
         {
