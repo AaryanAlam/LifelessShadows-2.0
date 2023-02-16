@@ -16,7 +16,6 @@ public class FPmovement : MonoBehaviour
     private float _originalHeight;
     public bool j = true;
     public GameManager gameManager;
-    public GameObject resetPoint;
 
     private CharacterController _controller;
     public Transform _camera;
@@ -32,11 +31,7 @@ public class FPmovement : MonoBehaviour
 
     }
 
-    public void RestartPlayer()
-    {
-        SceneManager.LoadScene("da");
-        transform.position = resetPoint.transform.position;
-    }
+    
 
     void Update()
     {

@@ -1497,6 +1497,8 @@ MonoBehaviour:
   crouchHeight: 1
   lookSensitivity: 2
   j: 1
+  gameManager: {fileID: 0}
+  resetPoint: {fileID: 0}
   _camera: {fileID: 6491043410906981564}
 --- !u!114 &828174418589146706
 MonoBehaviour:
@@ -1514,6 +1516,7 @@ MonoBehaviour:
   health: 100
   playerPrefab: {fileID: 6257109872112819856}
   spawn: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!82 &828174418589146705
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1524,7 +1527,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7cee9d75c8f56934d8cd9982a14b8d1f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: abc52bcfb380cdb4aa45e3db860309a3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
