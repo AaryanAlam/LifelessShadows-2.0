@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FPmovement : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class FPmovement : MonoBehaviour
     private float _originalHeight;
     public bool j = true;
     public GameManager gameManager;
+    public GameObject resetPoint;
 
     private CharacterController _controller;
     public Transform _camera;
@@ -27,6 +30,12 @@ public class FPmovement : MonoBehaviour
     }
     private void Awake() {
 
+    }
+
+    public void RestartPlayer()
+    {
+        SceneManager.LoadScene("da");
+        transform.position = resetPoint.transform.position;
     }
 
     void Update()
@@ -43,11 +52,10 @@ public class FPmovement : MonoBehaviour
         {
             _controller.Move(Vector3.up * jumpSpeed * Time.deltaTime);
         }
-        
-        if (gameManager.reset == false)
-        {
-            _controller.Move(Vector3.up * gravity * Time.deltaTime);
-        }
+
+
+        _controller.Move(Vector3.up * gravity * Time.deltaTime);
+
 
 
         if (Input.GetKey(KeyCode.LeftControl))

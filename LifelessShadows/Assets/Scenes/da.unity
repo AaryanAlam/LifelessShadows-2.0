@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13014191, g: 0.094540216, b: 0.12482641, a: 1}
+  m_IndirectSpecularColor: {r: 0.13014492, g: 0.09454236, b: 0.124829195, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3653,6 +3653,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6491043411263916825, guid: bba6b970a6152a352a717656db0df341, type: 3}
+      propertyPath: resetPoint
+      value: 
+      objectReference: {fileID: 486608207}
     - target: {fileID: 6491043411263916825, guid: bba6b970a6152a352a717656db0df341, type: 3}
       propertyPath: gameManager
       value: 
