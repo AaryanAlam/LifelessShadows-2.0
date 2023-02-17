@@ -12,6 +12,9 @@ public class Health : MonoBehaviour
     public GameObject spawn;
     public GameManager gameManager;
 
+    private void Start() {
+
+    }
     private void Awake()
     {
         health = 100;

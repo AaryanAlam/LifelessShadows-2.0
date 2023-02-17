@@ -24,13 +24,15 @@ public class DeathScreenMan : MonoBehaviour
         m_TextComponent.text = deathMessage;
         text.text = deathMessage;
         Debug.Log("Index was: " + rndIndex + " Text Message was: " + m_TextComponent.text);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         text.text = deathMessage;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Confined;
+
     }
 }

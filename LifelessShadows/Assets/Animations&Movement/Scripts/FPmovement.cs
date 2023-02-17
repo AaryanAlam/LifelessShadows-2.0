@@ -26,6 +26,8 @@ public class FPmovement : MonoBehaviour
         _originalHeight = _controller.height;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+
     }
     private void Awake() {
 
@@ -35,6 +37,8 @@ public class FPmovement : MonoBehaviour
 
     void Update()
     {
+
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         

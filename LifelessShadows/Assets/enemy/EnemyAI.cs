@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     public Light flashLight;
-    public float fieldOfViewAngle = 180f;
+    public float fieldOfViewAngle = 155f;
     public bool playerInSight;
     public Vector3 personalLastSighting;
 
@@ -95,6 +95,10 @@ public class EnemyAI : MonoBehaviour
         if (flashLight.enabled == enabled) 
         {
             fieldOfViewAngle = 360;
+        }
+        else 
+        {
+            fieldOfViewAngle = 155;
         }
     }
 }

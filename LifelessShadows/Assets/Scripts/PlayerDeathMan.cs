@@ -7,7 +7,7 @@ public class PlayerDeathMan : MonoBehaviour
 {
     public GameObject resetPoint;
 
-    private void Update()
+    private void Awake()
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
@@ -17,5 +17,7 @@ public class PlayerDeathMan : MonoBehaviour
     {
         SceneManager.LoadScene("da");
         transform.position = resetPoint.transform.position;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
