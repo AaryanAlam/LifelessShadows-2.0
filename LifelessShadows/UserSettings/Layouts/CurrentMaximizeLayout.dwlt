@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 2301
+  controlID: 11569
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 2302
+  controlID: 11570
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -421,16 +421,16 @@ MonoBehaviour:
   m_WindowGUID: 76cb08913430b422da6840f1cd9244e6
   m_Gizmos: 0
   m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 146.25421, y: 28.941729, z: 319.95547}
+    m_Target: {x: 138.65503, y: 23.594658, z: 327.85513}
     speed: 2
-    m_Value: {x: 146.25421, y: 28.941729, z: 319.95547}
+    m_Value: {x: 138.65503, y: 23.594658, z: 327.85513}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -477,13 +477,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.004315546, y: 0.9645692, z: -0.016245302, w: -0.26352274}
+    m_Target: {x: 0.08531062, y: -0.8228128, z: 0.12845193, w: 0.54710925}
     speed: 2
-    m_Value: {x: -0.004315286, y: 0.96451116, z: -0.016244324, w: -0.2635069}
+    m_Value: {x: 0.08530521, y: -0.8227605, z: 0.12844376, w: 0.5470745}
   m_Size:
-    m_Target: 9.967468
+    m_Target: 11.838301
     speed: 2
-    m_Value: 9.967468
+    m_Value: 11.838301
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -613,7 +613,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 2303
+  controlID: 11571
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -676,18 +676,18 @@ MonoBehaviour:
       m_ExpandedIDs: f0faffff3a5d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: floor
-        m_OriginalName: floor
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 24758
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -716,8 +716,8 @@ MonoBehaviour:
     y: 0
     width: 734
     height: 246
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -764,21 +764,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/textures
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/textures
+  - Assets/Scripts
   m_LastFoldersGridSize: 96
   m_LastProjectPath: /home/aaryan/Projects/LifelessShadows-2.0/LifelessShadows
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 83}
-    m_SelectedIDs: b2b80000
-    m_LastClickedID: 47282
+    scrollPos: {x: 0, y: 135}
+    m_SelectedIDs: 2e650000
+    m_LastClickedID: 25902
     m_ExpandedIDs: 000000001865000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -832,24 +832,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9e5d0000
-    m_LastClickedInstanceID: 23966
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 345e0000
+    m_LastClickedInstanceID: 24116
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000ae6d000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: textures
-      m_OriginalName: textures
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 47282
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -925,7 +925,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 23966
+  m_LastInspectedObjectInstanceID: 24116
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
