@@ -19,5 +19,6 @@ public class GameManager : MonoBehaviour
         reset = true;
         Debug.Log("Getting to it");
         SceneManager.LoadScene("Dead Scene");
+        gameObject.GetComponent<test>().enabled = true;
     }
 }
