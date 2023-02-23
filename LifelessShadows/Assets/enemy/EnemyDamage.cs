@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
+    public int EnemyHealth = 100;
     public Health PlayerHealth;
     // Start is called before the first frame update
     void Start()
@@ -14,7 +15,10 @@ public class EnemyDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (EnemyHealth <= 0) 
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerStay(Collider other) {
