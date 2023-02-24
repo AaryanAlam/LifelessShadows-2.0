@@ -8,6 +8,8 @@ public class FlashLightOffOn : MonoBehaviour
     public Light pointLight;
     public AudioSource source;
     public AudioClip ding;
+
+    public bool ison = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,13 @@ public class FlashLightOffOn : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("LightSwitch");
             spotLight.enabled = !spotLight.enabled;
+            if (spotLight.enabled == true){
+                ison = true;
+            }
+            else
+            {
+                ison = false;
+            }
             pointLight.enabled = !pointLight.enabled;
         }
     }

@@ -4,7 +4,8 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    public Light flashLight;
+
+    private FlashLightOffOn FlashLightOffOn;
     public float fieldOfViewAngle = 155f;
     public bool playerInSight;
     public Vector3 personalLastSighting;
@@ -28,6 +29,8 @@ public class EnemyAI : MonoBehaviour
         col = GetComponent<CapsuleCollider>();
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
+
+        FlashLightOffOn = GameObject.FindWithTag("Player").GetComponentInChildren<>
         previousSighting = Vector3.zero;
         personalLastSighting = Vector3.zero;
     }
@@ -92,7 +95,7 @@ public class EnemyAI : MonoBehaviour
             }
         }
         
-        if (flashLight.enabled == enabled) 
+        if (FlashLightOffOn.ison == true) 
         {
             fieldOfViewAngle = 360;
         }
