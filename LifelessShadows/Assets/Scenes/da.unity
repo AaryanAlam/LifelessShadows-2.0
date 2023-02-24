@@ -823,7 +823,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5607345302861584814, guid: 12e46a01aff044e42ac07b4e4ee68109, type: 3}
-  spawnRadius: 5
+  spawnRadius: 1000
+  spawnCount: 50
 --- !u!4 &1198961954
 Transform:
   m_ObjectHideFlags: 0
@@ -832,7 +833,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198961952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 150, y: 0, z: 340}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

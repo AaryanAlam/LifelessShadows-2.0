@@ -1,21 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using Unity.VisualScripting;
 
 public class enemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public float spawnRadius;
+    public int spawnRadius;
+    private int randomNum;
+    public int spawnCount;
 
     void Start()
     {
         // Spawn a single enemy at a random position within the spawn radius
-        SpawnEnemy();
+        SpawnEnemies(spawnCount);
     }
 
     void SpawnEnemy()
     {
-        Vector3 spawnPosition = transform.position + Random.insideUnitSphere * spawnRadius;
+        System.Random rnd = new System.Random();
+        randomNum = rnd.Next(0, spawnRadius);
+
+        Vector3 spawnPosition = new Vector3(randomNum, 1, randomNum);
         Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
     }
 
