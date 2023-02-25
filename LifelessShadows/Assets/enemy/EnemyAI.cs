@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
 
-    private FlashLightOffOn FlashLightOffOn;
+
     public float fieldOfViewAngle = 155f;
     public bool playerInSight;
     public Vector3 personalLastSighting;
@@ -18,6 +18,9 @@ public class EnemyAI : MonoBehaviour
     private CapsuleCollider col;
     private Animator anim;
     private GameObject player;
+
+    private Light flashL;
+    private GameObject flash;
     private Vector3 previousSighting;
 
     private int currentPatrolIndex = 0;
@@ -29,8 +32,8 @@ public class EnemyAI : MonoBehaviour
         col = GetComponent<CapsuleCollider>();
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
-
-        FlashLightOffOn = GameObject.FindWithTag("Player").GetComponentInChildren<>
+        flash = GameObject.FindWithTag("FlashLight");
+        flashL = flash.GetComponent<Light>();
         previousSighting = Vector3.zero;
         personalLastSighting = Vector3.zero;
     }
@@ -58,6 +61,7 @@ public class EnemyAI : MonoBehaviour
                 }
             }
         }
+
     }
 
     void OnTriggerExit(Collider other)
@@ -94,15 +98,14 @@ public class EnemyAI : MonoBehaviour
                 nav.speed = patrolSpeed;
             }
         }
-        
-        if (FlashLightOffOn.ison == true) 
-        {
-            fieldOfViewAngle = 360;
+        if (flashL.enabled == true) {
+            fieldOfViewAngle = 360f;
         }
         else 
         {
-            fieldOfViewAngle = 155;
+            fieldOfViewAngle = 155f;
         }
+
     }
 }
 

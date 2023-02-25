@@ -5,11 +5,14 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     public int EnemyHealth = 100;
-    public Health PlayerHealth;
+    private Health PlayerHealth;
+
+    private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindWithTag("Player");
+        PlayerHealth = player.GetComponent<Health>();
     }
 
     // Update is called once per frame
