@@ -13,6 +13,7 @@ public class FPmovement : MonoBehaviour
     public float gravity = -9.81f;
     public float crouchHeight = 1f;
     public float lookSensitivity = 2f;
+    public float superDashCost = 35.0f;
     private float _originalHeight;
     public bool j = true;
     public GameManager gameManager;
@@ -37,6 +38,23 @@ public class FPmovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            gameManager.AddTree(25);
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (gameManager.tree >= superDashCost)
+            {
+                Debug.Log("Money well Spent");
+                gameManager.RemoveTree(35);
+            }
+            else
+            {
+                Debug.Log("Not enough Tree");
+            }
+        }
+
 
 
         float x = Input.GetAxis("Horizontal");
