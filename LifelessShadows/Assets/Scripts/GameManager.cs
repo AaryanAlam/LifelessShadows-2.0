@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.N) && inTree)
         {
-            AddTree(8);
             treeLog.DestroyObject();
+            AddTree(8);
         }
         treeText.text = tree.ToString();
     }

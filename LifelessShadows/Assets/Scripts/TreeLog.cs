@@ -34,7 +34,14 @@ public class TreeLog : MonoBehaviour
 
     public void DestroyObject()
     {
+        StartCoroutine(Wait());
         Destroy(gameObject);
         gameManager.inTree = false;
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2f);
+        
     }
 }
