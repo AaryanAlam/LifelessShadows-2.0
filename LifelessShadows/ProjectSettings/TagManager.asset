@@ -6,6 +6,7 @@ TagManager:
   tags:
   - text
   - FlashLight
+  - damage
   layers:
   - Default
   - TransparentFX
