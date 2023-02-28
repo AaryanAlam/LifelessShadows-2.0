@@ -5,15 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuMan : MonoBehaviour
 {
-    private GameObject optionMenu;
-    private GameObject mainMenu;
+    public GameObject gameHolder;
 
+    public GameObject mainMenu;
+    public GameObject optionMenu;
     // Start is called before the first frame update
     void Start()
     {
-        optionMenu = GameObject.FindWithTag("OptionMenu");
-        mainMenu = GameObject.FindWithTag("mainMenu");
-        optionMenu.SetActive(false);
+        gameHolder.SetActive(false);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
@@ -26,8 +25,8 @@ public class MainMenuMan : MonoBehaviour
 
     public void StartGame()
     {
+        gameHolder.SetActive(true);
         Debug.Log("Start Pressed");
-        SceneManager.LoadScene("da");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

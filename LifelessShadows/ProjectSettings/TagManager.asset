@@ -9,6 +9,9 @@ TagManager:
   - damage
   - mainMenu
   - OptionMenu
+  - DeathCam
+  - healthHUD
+  - mainScreen
   layers:
   - Default
   - TransparentFX
