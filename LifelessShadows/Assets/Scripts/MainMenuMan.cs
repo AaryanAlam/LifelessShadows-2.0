@@ -13,6 +13,9 @@ public class MainMenuMan : MonoBehaviour
     {
         optionMenu = GameObject.FindWithTag("OptionMenu");
         mainMenu = GameObject.FindWithTag("mainMenu");
+        optionMenu.SetActive(false);
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -23,13 +26,23 @@ public class MainMenuMan : MonoBehaviour
 
     public void StartGame()
     {
+        Debug.Log("Start Pressed");
         SceneManager.LoadScene("da");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void OptionMenu()
     {
         optionMenu.SetActive(true);
+        mainMenu.SetActive(false);
+        Debug.Log("Option Pressed");
+    }
 
+    public void BackOption()
+    {
+        mainMenu.SetActive(true);
+        optionMenu.SetActive(false);
     }
 
     public void QuitGame() => Application.Quit();

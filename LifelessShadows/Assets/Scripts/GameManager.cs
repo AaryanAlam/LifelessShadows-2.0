@@ -29,6 +29,13 @@ public class GameManager : MonoBehaviour
             treeLog.DestroyObject();
             AddTree(8);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Alpha0)) 
+        {
+            SceneManager.LoadScene(0);
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
         treeText.text = tree.ToString();
     }
 
