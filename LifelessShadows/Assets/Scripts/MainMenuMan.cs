@@ -13,6 +13,8 @@ public class MainMenuMan : MonoBehaviour
     void Start()
     {
         gameHolder.SetActive(false);
+        optionMenu.SetActive(false);
+        mainMenu.SetActive(true);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
@@ -20,12 +22,14 @@ public class MainMenuMan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void StartGame()
     {
         gameHolder.SetActive(true);
+        mainMenu.SetActive(false);
+        optionMenu.SetActive(false);
         Debug.Log("Start Pressed");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
