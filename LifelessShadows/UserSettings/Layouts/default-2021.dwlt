@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 10077
+  controlID: 8317
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 10069
+  controlID: 8301
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 10078
+  controlID: 8345
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -651,9 +651,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 705.6495, y: 690.96704, z: -1072.9547}
+    m_Target: {x: 741.9902, y: 510.1908, z: 301.89127}
     speed: 2
-    m_Value: {x: 705.6495, y: 690.96704, z: -1072.9547}
+    m_Value: {x: 741.9902, y: 510.1908, z: 301.89127}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -700,13 +700,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.008639901, y: 0.10719983, z: 0.0009337049, w: -0.99417907}
+    m_Target: {x: 0.0056328448, y: 0.14143145, z: 0.0008069051, w: -0.9899111}
     speed: 2
-    m_Value: {x: 0.0086399, y: 0.107199825, z: 0.00093370484, w: -0.994179}
+    m_Value: {x: 0.0056328448, y: 0.14143145, z: 0.00080690515, w: -0.9899111}
   m_Size:
-    m_Target: 151.87184
+    m_Target: 1365.1832
     speed: 2
-    m_Value: 151.87184
+    m_Value: 1365.1832
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -762,9 +762,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 6c83ffff34fbffff845b00009e5b0000dc5b0000f45b00005c5c0000b25c0000ccaa000014ab00002aac0000
+      m_SelectedIDs: b2f0ffff
+      m_LastClickedID: -3918
+      m_ExpandedIDs: f806ffffb2f0ffffaaf2ffff3cf6ffffc8f6ffff36fbffff8a680000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -829,22 +829,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/textures
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/textures
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\repos\LifelessShadows-2.0\LifelessShadows
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 8}
-    m_SelectedIDs: 385e0000
-    m_LastClickedID: 24120
-    m_ExpandedIDs: 000000000c5e00000e5e0000105e0000125e0000145e0000165e000000ca9a3b
+    m_SelectedIDs: 24640000
+    m_LastClickedID: 25636
+    m_ExpandedIDs: 000000002464000026640000286400002a6400002c6400002e64000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -872,7 +872,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c5e00000e5e0000105e0000125e0000145e0000165e000000ca9a3b
+    m_ExpandedIDs: 000000002464000026640000286400002a6400002c6400002e64000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
