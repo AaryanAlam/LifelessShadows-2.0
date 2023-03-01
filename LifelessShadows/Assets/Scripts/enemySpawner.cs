@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class enemySpawner : MonoBehaviour
 {
      public GameObject enemyPrefab;
-    public int numberOfEnemiesToSpawn = 10;
+    public int numberOfEnemiesToSpawn;
     public float spawnRadius = 10f;
     public Terrain terrain;
 
