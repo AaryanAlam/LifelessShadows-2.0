@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject player;
     public GameObject resetPoint;
+    public MainMenuMan2 menuMan;
     public TreeLog treeLog;
     public bool reset = false;
     public bool inTree = false;
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Alpha0)) 
         {
-            SceneManager.LoadScene(0);
+            menuMan.backPressed();
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
         }
