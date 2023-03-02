@@ -36,6 +36,7 @@ public class MainMenuMan2 : MonoBehaviour
         mainMenu.SetActive(false);
         mainCam.enabled = false;
         gameCam.enabled = true;
+        Invoke("LockCurser", 0.5f);
     }
 
     public void optionPressed()
@@ -61,5 +62,10 @@ public class MainMenuMan2 : MonoBehaviour
     public void quitPressed()
     {
         Application.Quit();
+    }
+
+    public void LockCurser() {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

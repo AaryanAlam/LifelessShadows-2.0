@@ -31,7 +31,8 @@ public class FPmovement : MonoBehaviour
 
     }
     private void Awake() {
-
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     
