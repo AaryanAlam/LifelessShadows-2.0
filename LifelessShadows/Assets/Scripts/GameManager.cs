@@ -17,9 +17,10 @@ public class GameManager : MonoBehaviour
     public float tree;
     public Text treeText;
 
-    private void Start()
+    public void Start()
     {
-        tree = 0.0f;
+        LoadResourceData();
+
         player = GameObject.FindWithTag("Player");
     }
 
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
             AddTree(8);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Alpha0)) 
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Alpha0))
         {
             menuMan.backPressed();
             Cursor.lockState = CursorLockMode.Confined;
@@ -51,10 +52,22 @@ public class GameManager : MonoBehaviour
     public void AddTree(float AmountOfTree)
     {
         tree += AmountOfTree;
+        SaveResourceData();
     }
 
     public void RemoveTree(float AmountOfTree)
     {
         tree -= AmountOfTree;
+        SaveResourceData();
+    }
+
+    public void SaveResourceData()
+    {
+        PlayerPrefs.SetFloat("TreeLogs", tree);
+    }
+
+    public void LoadResourceData()
+    {
+        tree = PlayerPrefs.GetFloat("TreeLogs");
     }
 }

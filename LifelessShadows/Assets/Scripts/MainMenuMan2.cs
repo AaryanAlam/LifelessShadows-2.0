@@ -9,11 +9,14 @@ public class MainMenuMan2 : MonoBehaviour
     public GameObject game;
     public GameObject background;
 
+    public GameManager manager;
+
     public Camera gameCam;
     public Camera mainCam;
     // Start is called before the first frame update
     void Start()
     {
+        manager.LoadResourceData();
         mainMenu.SetActive(true);
         optionMenu.SetActive(false);
         game.SetActive(false);
@@ -37,6 +40,8 @@ public class MainMenuMan2 : MonoBehaviour
         mainCam.enabled = false;
         gameCam.enabled = true;
         Invoke("LockCurser", 0.5f);
+        manager.LoadResourceData();
+        Debug.Log(manager.tree);
     }
 
     public void optionPressed()
@@ -62,6 +67,7 @@ public class MainMenuMan2 : MonoBehaviour
     public void quitPressed()
     {
         Application.Quit();
+        manager.SaveResourceData();
     }
 
     public void LockCurser() {
