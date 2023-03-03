@@ -22,6 +22,7 @@ public class DifficultyScript : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("Difficulty")) {
             PlayerPrefs.SetFloat("Difficulty", 1);
+            Load();
         }
 
         else {
