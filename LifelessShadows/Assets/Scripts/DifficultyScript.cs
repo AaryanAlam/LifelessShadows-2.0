@@ -50,11 +50,11 @@ public class DifficultyScript : MonoBehaviour
         Save();
     }
 
-    void Save() {
+    public void Save() {
         PlayerPrefs.SetFloat("Difficulty", diff.value);
     }
 
-    void Load() {
+    public void Load() {
         diff.value = PlayerPrefs.GetFloat("Difficulty");
     }
 }

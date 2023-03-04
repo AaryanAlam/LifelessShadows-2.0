@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class VolumeScript : MonoBehaviour
 {
     [SerializeField] Slider VolumeSlider;  
+  
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,11 +35,11 @@ public class VolumeScript : MonoBehaviour
         Save();
     }
 
-    void Save() {
+    public void Save() {
         PlayerPrefs.SetFloat("Volume", VolumeSlider.value);
     }
 
-    void Load() {
+    public void Load() {
         VolumeSlider.value = PlayerPrefs.GetFloat("Volume");
     }
 }
