@@ -19,6 +19,8 @@ public class PlayerAnimations : MonoBehaviour
     int isCrouchHash;
 
     int isCrouchStandingHash;
+
+    int isWeakAttackHash; 
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,7 @@ public class PlayerAnimations : MonoBehaviour
         isRunHash = Animator.StringToHash("isRun");
         isCrouchHash = Animator.StringToHash("isCrouch");
         isCrouchStandingHash = Animator.StringToHash("isStanding");
+        isWeakAttackHash = Animator.StringToHash("isWeakAttack");
 
     }
 
@@ -44,12 +47,14 @@ public class PlayerAnimations : MonoBehaviour
         bool isRun = animator.GetBool(isRunHash);
         bool isCrouch = animator.GetBool(isCrouchHash);
         bool isStanding = animator.GetBool(isCrouchStandingHash);
+        bool isWeakAttack = animator.GetBool(isWeakAttackHash);
         bool forwardPressed = Input.GetKey("w");
         bool runPressed = Input.GetKey(KeyCode.LeftShift);
         bool backPressed = Input.GetKey("s");
         bool leftPressed = Input.GetKey("a");
         bool rightPressed = Input.GetKey("d");
         bool crouchPresssed = Input.GetKey(KeyCode.LeftControl);
+        bool weakAttackPressed = Input.GetMouseButtonDown(1);
 
 
 
@@ -107,6 +112,15 @@ public class PlayerAnimations : MonoBehaviour
         {
             animator.SetBool("isStrafeL", false);
         }
+        if (!isWeakAttack && weakAttackPressed) 
+        {
+            animator.SetBool("isWeakAttack", true);
+            Invoke("stopAttack", 0.41f);
+        }
 
+    }
+
+    public void stopAttack() {
+        animator.SetBool("isWeakAttack",false);
     }
 }
