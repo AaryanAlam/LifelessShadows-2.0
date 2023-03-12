@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1028176267}
-  m_IndirectSpecularColor: {r: 0.041034862, g: 0.072501, b: 0.12528211, a: 1}
+  m_IndirectSpecularColor: {r: 0.041037202, g: 0.07250326, b: 0.12528524, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1873,6 +1873,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Enemy
     clip: {fileID: 8300000, guid: b13fc7ebe70ce0345a6bf4f7cfa3b291, type: 3}
+    volume: 1
+    pitch: 0.75
+    loop: 1
+    source: {fileID: 0}
+  - name: Ambient Sound
+    clip: {fileID: 8300000, guid: c09f6f43f4081a54a8ba3472919c4790, type: 3}
     volume: 1
     pitch: 0.75
     loop: 1
