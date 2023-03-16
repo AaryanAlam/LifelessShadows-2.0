@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1028176267}
-  m_IndirectSpecularColor: {r: 0.041037202, g: 0.07250326, b: 0.12528524, a: 1}
+  m_IndirectSpecularColor: {r: 0.041034862, g: 0.072501, b: 0.12528211, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3806,6 +3806,14 @@ PrefabInstance:
     - target: {fileID: 507833203360602217, guid: 66a03ac67201fab99b1a816f7e4c365e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 507833203584693805, guid: 66a03ac67201fab99b1a816f7e4c365e, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3467121
+      objectReference: {fileID: 0}
+    - target: {fileID: 507833203584693805, guid: 66a03ac67201fab99b1a816f7e4c365e, type: 3}
+      propertyPath: m_Center.y
+      value: 1.121108
       objectReference: {fileID: 0}
     - target: {fileID: 684288754735865472, guid: 66a03ac67201fab99b1a816f7e4c365e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7741,7 +7749,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
@@ -7753,7 +7761,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 60
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -17579,7 +17587,7 @@ GameObject:
   - component: {fileID: 6693120356980598493}
   m_Layer: 0
   m_Name: mixamorig1:RightHand
-  m_TagString: Untagged
+  m_TagString: AttackHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

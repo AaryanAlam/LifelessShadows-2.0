@@ -54,7 +54,7 @@ public class PlayerAnimations : MonoBehaviour
         bool leftPressed = Input.GetKey("a");
         bool rightPressed = Input.GetKey("d");
         bool crouchPresssed = Input.GetKey(KeyCode.LeftControl);
-        bool weakAttackPressed = Input.GetMouseButtonDown(1);
+        bool weakAttackPressed = Input.GetMouseButtonDown(0);
 
 
 

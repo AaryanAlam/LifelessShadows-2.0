@@ -12,6 +12,7 @@ TagManager:
   - DeathCam
   - healthHUD
   - mainScreen
+  - AttackHand
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class EnemyDamage : MonoBehaviour
 {
+
     public int EnemyHealth = 100;
     private Health PlayerHealth;
 
@@ -14,6 +15,12 @@ public class EnemyDamage : MonoBehaviour
     private Image damVFXimg;
 
     private GameObject player;
+
+    private Animator playerAnim;
+
+    private bool attack;
+
+    private GameObject AttackHand;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +28,9 @@ public class EnemyDamage : MonoBehaviour
         damVFXimg = damVFX.GetComponent<Image>();
         player = GameObject.FindWithTag("Player");
         PlayerHealth = player.GetComponent<Health>();
+        playerAnim = player.GetComponent<Animator>();
+        attack = playerAnim.GetBool("isWeakAttack");
+        AttackHand = GameObject.FindWithTag("AttackHand");
     }
 
     // Update is called once per frame
@@ -37,6 +47,9 @@ public class EnemyDamage : MonoBehaviour
             Damage(1);
             effectOn();
         }
+        if (other.CompareTag("AttackHand")) {
+            takeDMG(10);
+        }
     }
 
     private void OnTriggerExit(Collider other) {
@@ -46,7 +59,11 @@ public class EnemyDamage : MonoBehaviour
     {
         PlayerHealth.health -= damage;
     }
-
+    
+    public void takeDMG(int Edamage) 
+    {
+        EnemyHealth -= Edamage;
+    }
     public void effectOn() {
         damVFXimg.enabled = true;
     }
