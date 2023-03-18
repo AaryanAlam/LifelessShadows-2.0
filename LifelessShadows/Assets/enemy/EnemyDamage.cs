@@ -42,14 +42,19 @@ public class EnemyDamage : MonoBehaviour
         }
     }
 
+
+    private void OnTriggerEnter(Collider other) {
+                if (other.CompareTag("AttackHand")) {
+            takeDMG(10);
+            Debug.Log("uh");
+        }
+    }
     private void OnTriggerStay(Collider other) {
         if (other.CompareTag("Player")) {
             Damage(1);
             effectOn();
         }
-        if (other.CompareTag("AttackHand")) {
-            takeDMG(10);
-        }
+
     }
 
     private void OnTriggerExit(Collider other) {
