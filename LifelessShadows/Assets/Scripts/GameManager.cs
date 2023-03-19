@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
             AddTree(8);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Alpha0))
+        if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             menuMan.backPressed();
             Cursor.lockState = CursorLockMode.Confined;

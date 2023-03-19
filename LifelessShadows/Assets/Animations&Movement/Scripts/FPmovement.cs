@@ -17,6 +17,8 @@ public class FPmovement : MonoBehaviour
     private float _originalHeight;
     public bool j = true;
     public GameManager gameManager;
+    public bool enemyIN = false;
+    public EnemyDamage enemyD;
 
     private CharacterController _controller;
     public Transform _camera;
@@ -39,6 +41,12 @@ public class FPmovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && enemyIN == true)
+        {
+            // Attack Animation
+            enemyD.takeDMG(Random.Range(12, 28));
+            
+        }      
         if (Input.GetKeyDown(KeyCode.V))
         {
             gameManager.AddTree(25);
@@ -120,4 +128,25 @@ public class FPmovement : MonoBehaviour
             0f
         );
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collison2");
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Collison with Enemy");
+            enemyIN = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Collison with Enemy Leave");
+            enemyIN = false;
+        }
+    }
+
+    
 }
