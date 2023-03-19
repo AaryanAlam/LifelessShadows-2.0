@@ -36,44 +36,53 @@ public class EnemyDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EnemyHealth <= 0) 
+        if (EnemyHealth <= 0)
         {
             Destroy(gameObject);
         }
     }
 
 
-    private void OnTriggerEnter(Collider other) {
-                if (other.CompareTag("AttackHand")) {
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("AttackHand"))
+        {
             takeDMG(10);
             Debug.Log("uh");
         }
     }
-    private void OnTriggerStay(Collider other) {
-        if (other.CompareTag("Player")) {
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
             Damage(1);
             effectOn();
         }
 
     }
 
-    private void OnTriggerExit(Collider other) {
+    private void OnTriggerExit(Collider other)
+    {
         Invoke("effectOff", 2f);
     }
-    public void Damage(int damage) 
+    public void Damage(int damage)
     {
         PlayerHealth.health -= damage;
     }
-    
-    public void takeDMG(int Edamage) 
+
+    public void takeDMG(int Edamage)
     {
+        Debug.Log(EnemyHealth);
         EnemyHealth -= Edamage;
+        Debug.Log(EnemyHealth);
     }
-    public void effectOn() {
+    public void effectOn()
+    {
         damVFXimg.enabled = true;
     }
 
-    public void effectOff() {
+    public void effectOff()
+    {
         damVFXimg.enabled = false;
     }
 }

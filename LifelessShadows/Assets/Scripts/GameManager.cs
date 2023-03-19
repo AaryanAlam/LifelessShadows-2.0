@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,13 +14,14 @@ public class GameManager : MonoBehaviour
     public TreeLog treeLog;
     public bool reset = false;
     public bool inTree = false;
-
+    private ParticleSystem Psystem;
 
     public float tree;
     public Text treeText;
 
     public void Start()
     {
+        Psystem = treeLog.GetComponent<ParticleSystem>();
         LoadResourceData();
 
         player = GameObject.FindWithTag("Player");
@@ -26,10 +29,9 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N) && inTree)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && inTree)
         {
-            treeLog.DestroyObject();
-            AddTree(8);
+            StartCoroutine(WaitForTree(1));
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha0))
@@ -69,5 +71,12 @@ public class GameManager : MonoBehaviour
     public void LoadResourceData()
     {
         tree = PlayerPrefs.GetFloat("TreeLogs");
+    }
+    IEnumerator WaitForTree(float i)
+    {
+        Psystem.Play();
+        yield return new WaitForSecondsRealtime(i);
+        treeLog.DestroyObject();
+        AddTree(8);
     }
 }

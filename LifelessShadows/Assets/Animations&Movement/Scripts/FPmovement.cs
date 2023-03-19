@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,7 +9,7 @@ public class FPmovement : MonoBehaviour
 {
     public AudioSource source;
     public AudioClip walking;
-   public float speed = 5f;
+    public float speed = 5f;
     public float jumpSpeed = 5f;
     public float gravity = -9.81f;
     public float crouchHeight = 1f;
@@ -32,21 +33,23 @@ public class FPmovement : MonoBehaviour
 
 
     }
-    private void Awake() {
+    private void Awake()
+    {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    
+
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && enemyIN == true)
         {
             // Attack Animation
+            Debug.Log("Attacked");
             enemyD.takeDMG(Random.Range(12, 28));
-            
-        }      
+            Thread.Sleep(50);
+        }
         if (Input.GetKeyDown(KeyCode.V))
         {
             gameManager.AddTree(25);
@@ -68,11 +71,11 @@ public class FPmovement : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        
+
         Vector3 move = transform.right * x + transform.forward * z;
 
         _controller.Move(move * speed * Time.deltaTime);
-            
+
 
         if (_controller.isGrounded && Input.GetButtonDown("Jump"))
         {
@@ -94,12 +97,12 @@ public class FPmovement : MonoBehaviour
             _controller.height = _originalHeight;
             speed = 5;
         }
-        
-        if (Input.GetKey(KeyCode.LeftShift)) 
+
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = 7.5f;
         }
-        else 
+        else
         {
             source.clip = walking;
             source.loop = true;
@@ -129,24 +132,22 @@ public class FPmovement : MonoBehaviour
         );
     }
 
-    public void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collison2");
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Collison with Enemy");
             enemyIN = true;
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Collison with Enemy Leave");
             enemyIN = false;
         }
     }
-
-    
 }
