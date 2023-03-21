@@ -24,6 +24,7 @@ public class TreeLog : MonoBehaviour
         {
             Debug.Log("Entered Cap");
             gameManager.inTree = true;
+            Debug.Log("TreeLog - L27 - inTree");
         }
     }
 

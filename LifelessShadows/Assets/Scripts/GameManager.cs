@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject player;
     public GameObject resetPoint;
+    public Story1 story1;
     public MainMenuMan2 menuMan;
     public TreeLog treeLog;
     public bool reset = false;
@@ -29,11 +30,18 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
+        if (inTree == true)
+        {
+            Debug.Log("intree1");
+        }
         if (Input.GetKeyDown(KeyCode.Mouse0) && inTree)
         {
             StartCoroutine(WaitForTree(1));
         }
-
+        if (inTree == true)
+        {
+            Debug.Log("intree2");
+        }
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             menuMan.backPressed();
@@ -41,6 +49,29 @@ public class GameManager : MonoBehaviour
             Cursor.visible = true;
         }
         treeText.text = tree.ToString();
+        if (inTree == true)
+        {
+            Debug.Log("intree3");
+        }
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            tree = 0;
+        }
+        if (inTree == true)
+        {
+            Debug.Log("intree4");
+        }
+        if (tree == 16)
+        {
+            Debug.Log("Tree = 16");
+            story1.treeCollected = true;
+            tree++;
+        }
+        if (inTree == true)
+        {
+            Debug.Log("intree5");
+        }
+
     }
 
     public void ResetGame()
@@ -78,5 +109,6 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(i);
         treeLog.DestroyObject();
         AddTree(8);
+        Debug.Log("Tree Chopped");
     }
 }
