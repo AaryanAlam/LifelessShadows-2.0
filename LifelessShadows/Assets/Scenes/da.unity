@@ -863,7 +863,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1212,7 +1212,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1592,7 +1592,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2524,7 +2524,32 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ajfkjdfjlsakjf\xE6lajdfljf lkkjasflkaj flkkjdlkjfalkjfssjflkasdjfksjfljsflkjskfjk\xE6sdjfsdkjflkdjfkjfkjflkjfksjfksdjfkjdfkldjfkldfjlkdjfkljfkssjfkdfjkldjfkdjfksdjfkljflkasjfklsajf\xE6lkjf\xE6afdlsj"
+  m_text: "Day 1:\r\nDear diary,\r\nI woke up in this forest and I am so lost. I
+    have no idea how to get back home. All I can do is walk around with tears in
+    my eyes. I am scared and alone. I found a shed to hide in and rest. My head is
+    very dizzy, and I keep having these weird nightmares.\r\n\r\nDay 2:\r\nDear diary,\r\nToday
+    I woke up feeling a little better. I decided to slowly go out of my comfort zone
+    and leave the shed. I started to look at the trees and through the openings,
+    I could see mountains and other beautiful scenery. I felt a sense of peace within
+    me.\r\n\r\nDay 3:\r\nDear diary,\r\nToday I explored a little more and found
+    some berries to eat. While I was eating, I heard yelling in the distance. I started
+    to walk towards the noise, and it led me to a hill. On my way up the hill, I
+    blacked out.\r\n\r\n\nDay 4:\r\nDear diary,\r\nI woke up with blood on my arm,
+    and I have no idea how it got there. I spent the day relaxing and trying to get
+    myself together. I started thinking back on my family, and it made me miss them
+    even more.\r\n\r\n\nDay 5:\r\nDear diary,\r\nToday I decided to go out and explore
+    again. I found an unidentified animal and captured it. I also found clean drinking
+    water, which was a relief.\r\n\r\n\n\n\nDay 6:\r\nDear diary,\r\nI tried to figure
+    out how to kill the animal for food, but I couldn't bring myself to do it. Instead,
+    I decided to let it go and continue exploring. While exploring, I found a big
+    foot print double the size of myself. I wonder what kind of creature made that?\r\n\r\nDay
+    7:\r\nDear diary,\r\nToday I woke up to find that the animal I let go had returned.
+    It had berries and sticks for me, which was nice. i decided to go to the hill
+    together, and while looking out, I saw a big shadow walking around. i was terrified
+    and i ran with the animal\r.\n\nDay 8:\r\nDear diary,\r\nLast night I woke up
+    in the middle of the night to see the animal being eaten by a monster. I was
+    frozen and couldn't move. I had to watch as the monster ate it. It was so scary,
+    and I hope that monster doesn't come back for me."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2551,8 +2576,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5085,7 +5110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &801755419
 Transform:
   m_ObjectHideFlags: 0
@@ -5641,7 +5666,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7934,7 +7959,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8832,7 +8857,32 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ajfkjdfjlsakjf\xE6lajdfljf lkkjasflkaj flkkjdlkjfalkjfssjflkasdjfksjfljsflkjskfjk\xE6sdjfsdkjflkdjfkjfkjflkjfksjfksdjfkjdfkldjfkldfjlkdjfkljfkssjfkdfjkldjfkdjfksdjfkljflkasjfklsajf\xE6lkjf\xE6afdlsj"
+  m_text: "Day 1:\r\nDear diary,\r\nI woke up in this forest and I am so lost. I
+    have no idea how to get back home. All I can do is walk around with tears in
+    my eyes. I am scared and alone. I found a shed to hide in and rest. My head is
+    very dizzy, and I keep having these weird nightmares.\r\n\r\nDay 2:\r\nDear diary,\r\nToday
+    I woke up feeling a little better. I decided to slowly go out of my comfort zone
+    and leave the shed. I started to look at the trees and through the openings,
+    I could see mountains and other beautiful scenery. I felt a sense of peace within
+    me.\r\n\r\nDay 3:\r\nDear diary,\r\nToday I explored a little more and found
+    some berries to eat. While I was eating, I heard yelling in the distance. I started
+    to walk towards the noise, and it led me to a hill. On my way up the hill, I
+    blacked out.\r\n\r\n\nDay 4:\r\nDear diary,\r\nI woke up with blood on my arm,
+    and I have no idea how it got there. I spent the day relaxing and trying to get
+    myself together. I started thinking back on my family, and it made me miss them
+    even more.\r\n\r\n\nDay 5:\r\nDear diary,\r\nToday I decided to go out and explore
+    again. I found an unidentified animal and captured it. I also found clean drinking
+    water, which was a relief.\r\n\r\n\n\n\nDay 6:\r\nDear diary,\r\nI tried to figure
+    out how to kill the animal for food, but I couldn't bring myself to do it. Instead,
+    I decided to let it go and continue exploring. While exploring, I found a big
+    foot print double the size of myself. I wonder what kind of creature made that?\r\n\r\nDay
+    7:\r\nDear diary,\r\nToday I woke up to find that the animal I let go had returned.
+    It had berries and sticks for me, which was nice. i decided to go to the hill
+    together, and while looking out, I saw a big shadow walking around. i was terrified
+    and i ran with the animal\r.\n\nDay 8:\r\nDear diary,\r\nLast night I woke up
+    in the middle of the night to see the animal being eaten by a monster. I was
+    frozen and couldn't move. I had to watch as the monster ate it. It was so scary,
+    and I hope that monster doesn't come back for me."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8859,8 +8909,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11320,7 +11370,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656987702}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -11348,6 +11398,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logbookSTART: {fileID: 711520818}
   logbookCanvas: {fileID: 1656987706}
+  myTextMeshPro1: {fileID: 1338612394}
+  myTextMeshPro2: {fileID: 348385289}
 --- !u!1 &1658280040
 GameObject:
   m_ObjectHideFlags: 0
@@ -13054,7 +13106,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
