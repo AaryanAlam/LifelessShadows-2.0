@@ -20,6 +20,7 @@ public class FPmovement : MonoBehaviour
     public GameManager gameManager;
     public bool enemyIN = false;
     public EnemyDamage enemyD;
+    public int stomachFullness = 5;
 
     private CharacterController _controller;
     public Transform _camera;
@@ -67,9 +68,12 @@ public class FPmovement : MonoBehaviour
             }
         }
 
+        if (stomachFullness < 0)
+        {
+            Debug.Log("You dead");
+        }
 
-
-        float x = Input.GetAxis("Horizontal");
+            float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
@@ -100,7 +104,7 @@ public class FPmovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 7.5f;
+            speed = 20f;
         }
         else
         {

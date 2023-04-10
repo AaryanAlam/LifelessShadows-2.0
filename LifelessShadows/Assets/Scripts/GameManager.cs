@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public bool reset = false;
     public bool inTree = false;
     private ParticleSystem Psystem;
+    private BackPackScript backpack;
+    
 
     public float tree;
     public Text treeText;
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour
         Psystem = treeLog.GetComponent<ParticleSystem>();
         LoadResourceData();
 
+        backpack = new BackPackScript();
         player = GameObject.FindWithTag("Player");
     }
 
@@ -34,7 +37,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("intree1");
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0) && inTree)
+        if (Input.GetKeyDown(KeyCode.E) && inTree)
         {
             StartCoroutine(WaitForTree(1));
         }
@@ -110,5 +113,32 @@ public class GameManager : MonoBehaviour
         treeLog.DestroyObject();
         AddTree(8);
         Debug.Log("Tree Chopped");
+    }
+
+    public IEnumerator WaitForFood(float size, GameObject food)
+    {
+        //Eating animation
+        if (size == 1)
+        {
+            //Apple eating animation start
+            Debug.Log("1 started");
+            Destroy(food);
+            yield return new WaitForSecondsRealtime(3);
+            //Apple eating animation end
+            //Fill hunger bar
+        }
+
+        if (size == 2)
+        {
+            // Basket Carry Animation
+            if (backpack.carrying == false)
+            {
+                backpack.carrying = true;
+            } else
+            {
+                backpack.fullness = 100;
+            }
+                
+        }
     }
 }

@@ -15,6 +15,7 @@ TagManager:
   - AttackHand
   - EnemyDamage
   - Enemy
+  - gameManager
   layers:
   - Default
   - TransparentFX
