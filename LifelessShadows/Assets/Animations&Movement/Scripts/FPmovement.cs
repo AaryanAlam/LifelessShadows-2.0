@@ -20,7 +20,6 @@ public class FPmovement : MonoBehaviour
     public GameManager gameManager;
     public bool enemyIN = false;
     public EnemyDamage enemyD;
-    public int stomachFullness = 5;
 
     private CharacterController _controller;
     public Transform _camera;
@@ -68,10 +67,7 @@ public class FPmovement : MonoBehaviour
             }
         }
 
-        if (stomachFullness < 0)
-        {
-            Debug.Log("You dead");
-        }
+        
 
             float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -138,7 +134,6 @@ public class FPmovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collison2");
         if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Collison with Enemy");
@@ -154,4 +149,6 @@ public class FPmovement : MonoBehaviour
             enemyIN = false;
         }
     }
+
+    
 }
