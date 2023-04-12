@@ -60,12 +60,8 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Damage(1);
             effectOn();
-            while (damVFXimg.enabled == true)
-            {
-                Invoke("effectOff", 2f);
-            }
+            Damage(1);
         }
 
     }
@@ -74,6 +70,7 @@ public class EnemyDamage : MonoBehaviour
     public void Damage(int damage)
     {
         PlayerHealth.health -= damage;
+        Invoke("effectOff", 2f);
     }
 
     public void takeDMG(int Edamage)
