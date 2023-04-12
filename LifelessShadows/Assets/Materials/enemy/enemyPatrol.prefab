@@ -5138,7 +5138,7 @@ GameObject:
   - component: {fileID: 507833203360602217}
   m_Layer: 0
   m_Name: enemyPatrol
-  m_TagString: Untagged
+  m_TagString: EnemyPatrol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5210,8 +5210,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6322384, y: 1.3467121, z: 0.45570672}
-  m_Center: {x: -0.020382077, y: 1.121108, z: 0.032975614}
+  m_Size: {x: 0.9490163, y: 1.6406021, z: 0.5925633}
+  m_Center: {x: 0.0025903299, y: 1.268053, z: 0.033914447}
 --- !u!114 &507833203584693804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7209,6 +7209,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!136 &7859399097112541757
 CapsuleCollider:
   m_ObjectHideFlags: 0

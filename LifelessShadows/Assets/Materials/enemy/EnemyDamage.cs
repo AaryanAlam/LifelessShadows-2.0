@@ -21,6 +21,9 @@ public class EnemyDamage : MonoBehaviour
     private bool attack;
 
     private GameObject AttackHand;
+
+    private GameObject enemyPatrol;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,7 @@ public class EnemyDamage : MonoBehaviour
         playerAnim = player.GetComponent<Animator>();
         attack = playerAnim.GetBool("isWeakAttack");
         AttackHand = GameObject.FindWithTag("AttackHand");
+        enemyPatrol = GameObject.FindWithTag("EnemyPatrol");
     }
 
     // Update is called once per frame
@@ -38,7 +42,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (EnemyHealth <= 0)
         {
-            Destroy(gameObject);
+            Destroy(enemyPatrol);
         }
     }
 
@@ -50,6 +54,7 @@ public class EnemyDamage : MonoBehaviour
             takeDMG(10);
             Debug.Log("uh");
         }
+
     }
     private void OnTriggerStay(Collider other)
     {
@@ -57,14 +62,15 @@ public class EnemyDamage : MonoBehaviour
         {
             Damage(1);
             effectOn();
+            while (damVFXimg.enabled == true)
+            {
+                Invoke("effectOff", 2f);
+            }
         }
 
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        Invoke("effectOff", 2f);
-    }
+
     public void Damage(int damage)
     {
         PlayerHealth.health -= damage;

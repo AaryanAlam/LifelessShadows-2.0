@@ -16,6 +16,7 @@ TagManager:
   - EnemyDamage
   - Enemy
   - gameManager
+  - EnemyPatrol
   layers:
   - Default
   - TransparentFX
