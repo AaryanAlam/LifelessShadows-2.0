@@ -23,23 +23,26 @@ public class BasketScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Checks if Player presses E and is close enough
         if (inTrigger && Input.GetKeyDown(KeyCode.E))
         {
             Destroy(gameObject);
             stomachFullness = 100;
         }
         StartCoroutine(hunger());
+        // Sets hunger bar to hunger variable
         foodSlider.value = stomachFullness;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Basket Collision");
+        // Checks if in trigger
         inTrigger = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
+        // Checks if not in trigger
         inTrigger = false;
     }
 

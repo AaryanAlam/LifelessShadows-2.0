@@ -20,11 +20,10 @@ public class TreeLog : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Checks if player in Collider
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Entered Cap");
             gameManager.inTree = true;
-            Debug.Log("TreeLog - L27 - inTree");
         }
     }
 
@@ -35,6 +34,7 @@ public class TreeLog : MonoBehaviour
 
     public void DestroyObject()
     {
+        // Destroys TreeLog if called
         StartCoroutine(Wait());
         Destroy(gameObject);
         gameManager.inTree = false;
@@ -42,6 +42,7 @@ public class TreeLog : MonoBehaviour
 
     IEnumerator Wait()
     {
+        // Waits
         yield return new WaitForSeconds(2f);
         
     }

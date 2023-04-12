@@ -36,67 +36,57 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
+        // Sets food Text to hunger variable
         foodText.text = basket.stomachFullness.ToString();
-        if (inTree == true)
-        {
-            Debug.Log("intree1");
-        }
+
         if (Input.GetKeyDown(KeyCode.E) && inTree)
         {
             StartCoroutine(WaitForTree(1));
         }
-        if (inTree == true)
-        {
-            Debug.Log("intree2");
-        }
+        
+        // Goes to Menu
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             menuMan.backPressed();
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
         }
+        // Sets Tree text
         treeText.text = tree.ToString();
-        if (inTree == true)
-        {
-            Debug.Log("intree3");
-        }
+        
+        // Admin Command Resets Tree
         if (Input.GetKeyDown(KeyCode.Y))
         {
             tree = 0;
         }
-        if (inTree == true)
-        {
-            Debug.Log("intree4");
-        }
+        
         if (tree == 16)
         {
-            Debug.Log("Tree = 16");
             story1.treeCollected = true;
             tree++;
         }
-        if (inTree == true)
-        {
-            Debug.Log("intree5");
-        }
+        
 
     }
 
     public void ResetGame()
     {
+        // Kills player and resets game
         reset = true;
-        Debug.Log("Getting to it");
         SceneManager.LoadScene("Dead Scene");
         //gameObject.GetComponent<test>().enabled = true;
     }
 
     public void AddTree(float AmountOfTree)
     {
+        // Adds tree
         tree += AmountOfTree;
         SaveResourceData();
     }
 
     public void RemoveTree(float AmountOfTree)
     {
+        // Removes tree
         tree -= AmountOfTree;
         SaveResourceData();
     }
@@ -112,11 +102,11 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator WaitForTree(float i)
     {
+        // Starts Particles and waits for some time then adds tree
         Psystem.Play();
         yield return new WaitForSecondsRealtime(i);
         treeLog.DestroyObject();
         AddTree(8);
-        Debug.Log("Tree Chopped");
     }
 
     

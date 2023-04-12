@@ -19,6 +19,7 @@ public class FlashLightOffOn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if i is pressed plays sound, turns either on or off
         if (Input.GetKeyDown(KeyCode.I))
         {
             FindObjectOfType<AudioManager>().Play("LightSwitch");

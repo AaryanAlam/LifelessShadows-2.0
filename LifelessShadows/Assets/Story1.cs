@@ -22,10 +22,8 @@ public class Story1 : MonoBehaviour
     {
         if (treeCollected) 
         {
-            Debug.Log("Tree Collected");
             // Nightmare Animation
             //pDeathMan.RestartPlayer();
-            Debug.Log("Story1 Done");
         }
     }
 }

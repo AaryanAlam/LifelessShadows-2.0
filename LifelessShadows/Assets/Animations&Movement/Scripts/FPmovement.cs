@@ -43,22 +43,23 @@ public class FPmovement : MonoBehaviour
 
     void Update()
     {
+        // Attack Enemy
         if (Input.GetKeyDown(KeyCode.Mouse0) && enemyIN == true)
         {
             // Attack Animation
-            Debug.Log("Attacked");
             enemyD.takeDMG(Random.Range(12, 28));
             Thread.Sleep(50);
         }
+        // Get free Tree - Admin Command
         if (Input.GetKeyDown(KeyCode.V))
         {
             gameManager.AddTree(25);
         }
+        // Cost/Pay System - Temporary
         if (Input.GetKeyDown(KeyCode.B))
         {
             if (gameManager.tree >= superDashCost)
             {
-                Debug.Log("Money well Spent");
                 gameManager.RemoveTree(35);
             }
             else
@@ -68,25 +69,27 @@ public class FPmovement : MonoBehaviour
         }
 
         
-
-            float x = Input.GetAxis("Horizontal");
+        // Getting x and z axis
+        float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        // Making Move Command for Character Controller
         Vector3 move = transform.right * x + transform.forward * z;
 
+        // Assigning to Character Controller
         _controller.Move(move * speed * Time.deltaTime);
 
-
+        // Jump Command
         if (_controller.isGrounded && Input.GetButtonDown("Jump"))
         {
             _controller.Move(Vector3.up * jumpSpeed * Time.deltaTime);
         }
 
-
+        // Using Jump in Character Controller
         _controller.Move(Vector3.up * gravity * Time.deltaTime);
 
 
-
+        // Crouch
         if (Input.GetKey(KeyCode.LeftControl))
         {
             _controller.height = crouchHeight;
@@ -98,6 +101,7 @@ public class FPmovement : MonoBehaviour
             speed = 5;
         }
 
+        // Run
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = 20f;
@@ -134,18 +138,19 @@ public class FPmovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Checking if Colliding with Enemy
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Collison with Enemy");
             enemyIN = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+
+        // Checking if not colliding with Enemy
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Collison with Enemy Leave");
             enemyIN = false;
         }
     }

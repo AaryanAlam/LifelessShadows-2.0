@@ -13,6 +13,7 @@ public class VolumeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Saving Volume for next Time in Settings
         if (!PlayerPrefs.HasKey("Volume")) {
             PlayerPrefs.SetFloat("Volume", 100);
             Load();
@@ -26,6 +27,7 @@ public class VolumeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Checks Volume and Assigns it
         SetVolume();   
     }
 
@@ -35,10 +37,12 @@ public class VolumeScript : MonoBehaviour
         Save();
     }
 
+    // Saves The volume
     public void Save() {
         PlayerPrefs.SetFloat("Volume", VolumeSlider.value);
     }
 
+    // Loads Volume
     public void Load() {
         VolumeSlider.value = PlayerPrefs.GetFloat("Volume");
     }
