@@ -12,7 +12,6 @@ public class BasketScript : MonoBehaviour
     public Slider foodSlider;
 
     private bool inTrigger = false;
-    public int stomachFullness = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +26,14 @@ public class BasketScript : MonoBehaviour
         if (inTrigger && Input.GetKeyDown(KeyCode.E))
         {
             Destroy(gameObject);
-            stomachFullness = 100;
+            gameManager.stomachFullness = 100;
         }
-        StartCoroutine(hunger());
+
+        
+
+
         // Sets hunger bar to hunger variable
-        foodSlider.value = stomachFullness;
+        foodSlider.value = gameManager.stomachFullness;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -46,13 +48,5 @@ public class BasketScript : MonoBehaviour
         inTrigger = false;
     }
 
-    IEnumerator hunger()
-    {
-        while (true)
-        {
-            yield return new WaitForSecondsRealtime(3);
-            stomachFullness -= UnityEngine.Random.Range(0, 3);
-        }
-
-    }
+    
 }

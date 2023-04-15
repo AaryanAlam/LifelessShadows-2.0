@@ -104,7 +104,8 @@ public class FPmovement : MonoBehaviour
         // Run
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 20f;
+            speed = 8f;
+            gameManager.maxDetuct = 6;
         }
         else
         {
@@ -112,6 +113,7 @@ public class FPmovement : MonoBehaviour
             source.loop = true;
             source.Play();
             speed = 5;
+            gameManager.maxDetuct = 3;
         }
 
         // first-person look

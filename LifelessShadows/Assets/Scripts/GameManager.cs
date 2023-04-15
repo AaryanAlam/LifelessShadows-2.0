@@ -17,7 +17,10 @@ public class GameManager : MonoBehaviour
     public bool inTree = false;
     private ParticleSystem Psystem;
     public BasketScript basket;
-    
+    public int stomachFullness = 35;
+    public Health health;
+    public int maxDetuct = 3;
+
 
     public float tree;
     public Text treeText;
@@ -29,21 +32,24 @@ public class GameManager : MonoBehaviour
         LoadResourceData();
 
         player = GameObject.FindWithTag("Player");
-        foodText.text = basket.stomachFullness.ToString();
+        foodText.text = stomachFullness.ToString();
+
+        StartCoroutine(hunger());
+        StartCoroutine(healthNeed());
     }
 
-    
+
 
     public void Update()
     {
         // Sets food Text to hunger variable
-        foodText.text = basket.stomachFullness.ToString();
+        foodText.text = stomachFullness.ToString();
 
         if (Input.GetKeyDown(KeyCode.E) && inTree)
         {
             StartCoroutine(WaitForTree(1));
         }
-        
+
         // Goes to Menu
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
@@ -53,19 +59,19 @@ public class GameManager : MonoBehaviour
         }
         // Sets Tree text
         treeText.text = tree.ToString();
-        
+
         // Admin Command Resets Tree
         if (Input.GetKeyDown(KeyCode.Y))
         {
             tree = 0;
         }
-        
+
         if (tree == 16)
         {
             story1.treeCollected = true;
             tree++;
         }
-        
+
 
     }
 
@@ -109,5 +115,32 @@ public class GameManager : MonoBehaviour
         AddTree(8);
     }
 
-    
+    IEnumerator hunger()
+    {
+        while (true)
+        {
+            if (stomachFullness > 0)
+            {
+                stomachFullness -= Random.Range(0, maxDetuct);
+            }
+
+            yield return new WaitForSeconds(1f);
+
+        }
+
+    }
+
+    IEnumerator healthNeed()
+    {
+        while (true)
+        {
+            if (stomachFullness <= 0)
+            {
+                health.health -= Random.Range(0, 3);
+            }
+
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
 }

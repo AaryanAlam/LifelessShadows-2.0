@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1028176267}
-  m_IndirectSpecularColor: {r: 0.041034862, g: 0.072501, b: 0.12528211, a: 1}
+  m_IndirectSpecularColor: {r: 0.041037202, g: 0.07250326, b: 0.12528524, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11008,7 +11008,6 @@ MonoBehaviour:
   empty: {fileID: 1668069384}
   player: {fileID: 2011675289}
   foodSlider: {fileID: 1824672616}
-  stomachFullness: 5
 --- !u!4 &1594270916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 473692, guid: 940bad1b128c3674fa1a8f3e1ee11c2c, type: 3}
@@ -22484,6 +22483,10 @@ PrefabInstance:
       propertyPath: basket
       value: 
       objectReference: {fileID: 1594270913}
+    - target: {fileID: 6312135809934456682, guid: 47e28a9e480a31a428486f3bdd0fa7f8, type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 5866666021610549202}
     - target: {fileID: 6312135809934456682, guid: 47e28a9e480a31a428486f3bdd0fa7f8, type: 3}
       propertyPath: inTree
       value: 0
