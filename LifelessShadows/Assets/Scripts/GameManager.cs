@@ -143,4 +143,61 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Nightmare(int i)
+    {
+        switch (i)
+        {
+            case 0:
+                break;
+            case 1:
+                // Sleep Animation
+                // Nightmare Cutscene
+                health.health = 100;
+                stomachFullness = 100;
+                // Cutscene
+                // Spawn Location & Rotation
+                break;
+            case 2:
+                // Sleep Animation
+                // Nightmare Cutscene
+                health.health = 100;
+                stomachFullness = 100;
+                // Cutscene
+                // Spawn Location & Rotation
+                break;
+            case 3:
+                // Sleep Animation
+                // Nightmare Cutscene
+                health.health = 100;
+                stomachFullness = 100;
+                // Cutscene
+                // Spawn Location & Rotation
+                break;
+            case 4:
+                // Sleep Animation
+                // Nightmare Cutscene
+                health.health = 100;
+                stomachFullness = 100;
+                // Cutscene
+                // Spawn Location & Rotation
+                break;
+            case 5:
+                // Sleep Animation
+                // Nightmare Cutscene
+                health.health = 100;
+                stomachFullness = 100;
+                // Cutscene
+                // Spawn Location & Rotation
+                break;
+            case 6:
+                // Sleep Animation
+                // Nightmare Cutscene
+                health.health = 100;
+                stomachFullness = 100;
+                // Cutscene
+                // Spawn Location & Rotation
+                break;
+
+        }
+    }
 }
