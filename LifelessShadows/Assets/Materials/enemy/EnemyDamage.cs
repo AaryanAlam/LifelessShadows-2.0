@@ -43,6 +43,7 @@ public class EnemyDamage : MonoBehaviour
         if (EnemyHealth <= 0)
         {
             Destroy(enemyPatrol);
+            effectOff();
         }
     }
 
