@@ -17,9 +17,10 @@ public class GameManager : MonoBehaviour
     public bool inTree = false;
     private ParticleSystem Psystem;
     public BasketScript basket;
-    public int stomachFullness = 35;
+    public int stomachFullness = 8;
     public Health health;
     public int maxDetuct = 3;
+    public float time = 5.0f;
 
 
     public float tree;
@@ -30,11 +31,10 @@ public class GameManager : MonoBehaviour
     {
         Psystem = treeLog.GetComponent<ParticleSystem>();
         LoadResourceData();
-
+        
         player = GameObject.FindWithTag("Player");
         foodText.text = stomachFullness.ToString();
 
-        StartCoroutine(hunger());
         StartCoroutine(healthNeed());
     }
 
@@ -72,7 +72,13 @@ public class GameManager : MonoBehaviour
             tree++;
         }
 
+        time -= Time.deltaTime;
+        Debug.Log(time);
 
+        if (time <= 0)
+        {
+            timerEnded();
+        }
     }
 
     public void ResetGame()
@@ -115,20 +121,7 @@ public class GameManager : MonoBehaviour
         AddTree(8);
     }
 
-    IEnumerator hunger()
-    {
-        while (true)
-        {
-            if (stomachFullness > 0)
-            {
-                stomachFullness -= Random.Range(0, maxDetuct);
-            }
-
-            yield return new WaitForSeconds(1f);
-
-        }
-
-    }
+    
 
     IEnumerator healthNeed()
     {
@@ -141,6 +134,14 @@ public class GameManager : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
         }
+    }
+
+    public void timerEnded()
+    {
+        time = 60;
+        stomachFullness -= Random.Range(0, maxDetuct);
+        // Health go down timer
+        Debug.LogWarning("Timer Ended");
     }
 
     public void Nightmare(int i)
@@ -198,6 +199,11 @@ public class GameManager : MonoBehaviour
                 // Spawn Location & Rotation
                 break;
 
+
+
+                
         }
     }
+
+
 }
