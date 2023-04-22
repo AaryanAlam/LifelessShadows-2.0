@@ -36,8 +36,8 @@ public class TreeLog : MonoBehaviour
 
     public void DestroyTree()
     {
-        // Destroy Tree
-        // Add tree
+        Destroy(gameObject);
+        gameManager.AddTree(8);
     }
 
 

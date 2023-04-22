@@ -83,7 +83,6 @@ public class GameManager : MonoBehaviour
         }
 
         time -= Time.deltaTime;
-        Debug.Log(time);
 
 
 
@@ -93,8 +92,8 @@ public class GameManager : MonoBehaviour
         }
 
         if (timeTree <= 0)
-        { 
-            treelog 
+        {
+            treeLog.DestroyTree();
         }
 
     }
