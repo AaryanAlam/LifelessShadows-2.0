@@ -20,7 +20,10 @@ public class GameManager : MonoBehaviour
     public int stomachFullness = 8;
     public Health health;
     public int maxDetuct = 3;
-    public float time = 5.0f;
+    public float time = 60.0f;
+    public float timeH = 10.0f;
+    public float timeTree = 5.0f;
+    bool startTreeTimer = false;
 
 
     public float tree;
@@ -31,7 +34,7 @@ public class GameManager : MonoBehaviour
     {
         Psystem = treeLog.GetComponent<ParticleSystem>();
         LoadResourceData();
-        
+
         player = GameObject.FindWithTag("Player");
         foodText.text = stomachFullness.ToString();
 
@@ -45,9 +48,16 @@ public class GameManager : MonoBehaviour
         // Sets food Text to hunger variable
         foodText.text = stomachFullness.ToString();
 
+
         if (Input.GetKeyDown(KeyCode.E) && inTree)
         {
-            StartCoroutine(WaitForTree(1));
+            startTreeTimer = true;
+
+        }
+
+        if (startTreeTimer)
+        {
+            timeTree -= Time.deltaTime;
         }
 
         // Goes to Menu
@@ -75,10 +85,18 @@ public class GameManager : MonoBehaviour
         time -= Time.deltaTime;
         Debug.Log(time);
 
+
+
         if (time <= 0)
         {
             timerEnded();
         }
+
+        if (timeTree <= 0)
+        { 
+            treelog 
+        }
+
     }
 
     public void ResetGame()
@@ -108,20 +126,15 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("TreeLogs", tree);
     }
 
+    
+
     public void LoadResourceData()
     {
         tree = PlayerPrefs.GetFloat("TreeLogs");
     }
-    IEnumerator WaitForTree(float i)
-    {
-        // Starts Particles and waits for some time then adds tree
-        Psystem.Play();
-        yield return new WaitForSecondsRealtime(i);
-        treeLog.DestroyObject();
-        AddTree(8);
-    }
-
     
+
+
 
     IEnumerator healthNeed()
     {
@@ -140,9 +153,9 @@ public class GameManager : MonoBehaviour
     {
         time = 60;
         stomachFullness -= Random.Range(0, maxDetuct);
-        // Health go down timer
-        Debug.LogWarning("Timer Ended");
     }
+
+    
 
     public void Nightmare(int i)
     {
@@ -201,7 +214,7 @@ public class GameManager : MonoBehaviour
 
 
 
-                
+
         }
     }
 

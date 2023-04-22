@@ -32,20 +32,13 @@ public class TreeLog : MonoBehaviour
         gameManager.inTree = false;
     }
 
-    public void DestroyObject()
-    {
-        // Destroys TreeLog if called
-        StartCoroutine(Wait());
-        Destroy(gameObject);
-        gameManager.inTree = false;
-    }
-
-    IEnumerator Wait()
-    {
-        // Waits
-        yield return new WaitForSeconds(2f);
-        
-    }
-
     
+
+    public void DestroyTree()
+    {
+        // Destroy Tree
+        // Add tree
+    }
+
+
 }
