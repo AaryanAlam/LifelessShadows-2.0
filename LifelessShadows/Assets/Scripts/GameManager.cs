@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public GameObject resetPoint;
     public Story1 story1;
     public MainMenuMan2 menuMan;
-    public TreeLog treeLog;
     public bool reset = false;
     public bool inTree = false;
     private ParticleSystem Psystem;
@@ -32,7 +31,6 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        Psystem = treeLog.GetComponent<ParticleSystem>();
         LoadResourceData();
 
         player = GameObject.FindWithTag("Player");
@@ -47,19 +45,7 @@ public class GameManager : MonoBehaviour
     {
         // Sets food Text to hunger variable
         foodText.text = stomachFullness.ToString();
-
-
-        if (Input.GetKeyDown(KeyCode.E) && inTree)
-        {
-            startTreeTimer = true;
-
-        }
-
-        if (startTreeTimer)
-        {
-            timeTree -= Time.deltaTime;
-        }
-
+       
         // Goes to Menu
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
@@ -91,10 +77,7 @@ public class GameManager : MonoBehaviour
             timerEnded();
         }
 
-        if (timeTree <= 0)
-        {
-            treeLog.DestroyTree();
-        }
+       
 
     }
 

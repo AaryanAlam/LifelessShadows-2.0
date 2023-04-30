@@ -4,40 +4,46 @@ using UnityEngine;
 
 public class TreeLog : MonoBehaviour
 {
-    public GameManager gameManager;
+    private GameManager gameManager;
 
+    private bool trigger = false;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello");
+        Debug.Log("started");
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+        if (gameManager == null)
+        {
+            Debug.Log("Could not find GameManager object");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (trigger)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Debug.Log("R");
+                DestroyTree();
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // Checks if player in Collider
-        if (other.CompareTag("Player"))
-        {
-            gameManager.inTree = true;
-        }
-    }
+        Debug.Log("Triggered");
 
-    private void OnTriggerExit(Collider other)
-    {
-        gameManager.inTree = false;
-    }
+        Debug.Log("Pressed");
+        trigger = true;
 
-    
+    }
 
     public void DestroyTree()
     {
         Destroy(gameObject);
-        gameManager.tree =+ 8;
+        gameManager.tree += 8;
     }
 
 
