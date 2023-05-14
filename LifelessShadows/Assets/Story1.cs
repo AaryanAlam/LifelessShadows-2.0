@@ -1,28 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class Story1 : MonoBehaviour
 {
     public GameManager gameMan;
     public bool treeCollected = false;
     public PlayerDeathMan pDeathMan;
-    // Start is called before the first frame update
+    public GameObject timeline1;
+    PlayableDirector timelinedirector;
+
     void Start()
     {
-        
+        timelinedirector = timeline1.GetComponent<PlayableDirector>();
+        timelinedirector.stopped += OnTimelineStopped;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            timelinedirector.Play();
+        }
+    }
+    void OnTimelineStopped(PlayableDirector director)
+    {
+        timelinedirector.Stop();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         // Nightmare Cutscene
         gameMan.story1Succeces = true;
-        Debug.Log("FInished Story 1");
+        Debug.Log("Finished Story 1");
+        //timelinedirector.Play();
     }
 }
