@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public bool inTree = false;
     private ParticleSystem Psystem;
     public BasketScript basket;
+    public GameObject story1trig;
     public int stomachFullness = 8;
     public Health health;
     public int maxDetuct = 3;
@@ -23,6 +24,9 @@ public class GameManager : MonoBehaviour
     public float timeH = 10.0f;
     public float timeTree = 5.0f;
     bool startTreeTimer = false;
+
+    public bool story1Succeces = false;
+    public bool Story1Done = false;
 
 
     public float tree;
@@ -35,6 +39,7 @@ public class GameManager : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
         foodText.text = stomachFullness.ToString();
+        story1trig.SetActive(false);
 
         StartCoroutine(healthNeed());
     }
@@ -61,12 +66,7 @@ public class GameManager : MonoBehaviour
         {
             tree = 0;
         }
-
-        if (tree == 16)
-        {
-            story1.treeCollected = true;
-            tree++;
-        }
+        
 
         time -= Time.deltaTime;
 
@@ -77,7 +77,10 @@ public class GameManager : MonoBehaviour
             timerEnded();
         }
 
-       
+        if (Story1Done)
+        {
+            story1trig.SetActive(true);
+        }
 
     }
 

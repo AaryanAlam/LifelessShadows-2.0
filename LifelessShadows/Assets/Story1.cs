@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Story1 : MonoBehaviour
 {
+    public GameManager gameMan;
     public bool treeCollected = false;
     public PlayerDeathMan pDeathMan;
     // Start is called before the first frame update
@@ -20,10 +21,8 @@ public class Story1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (treeCollected) 
-        {
-            // Nightmare Animation
-            //pDeathMan.RestartPlayer();
-        }
+        // Nightmare Cutscene
+        gameMan.story1Succeces = true;
+        Debug.Log("FInished Story 1");
     }
 }

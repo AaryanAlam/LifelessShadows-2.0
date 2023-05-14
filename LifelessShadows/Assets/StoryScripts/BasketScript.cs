@@ -10,6 +10,7 @@ public class BasketScript : MonoBehaviour
     public GameObject empty;
     public FPmovement player;
     public Slider foodSlider;
+    
 
     private bool inTrigger = false;
 
@@ -27,6 +28,7 @@ public class BasketScript : MonoBehaviour
         {
             Destroy(gameObject);
             gameManager.stomachFullness = 100;
+            gameManager.Story1Done = true;
         }
 
         
