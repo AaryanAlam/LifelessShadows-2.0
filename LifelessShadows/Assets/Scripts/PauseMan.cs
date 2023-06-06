@@ -5,6 +5,7 @@ using UnityEngine;
 public class PauseMan : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject holder;
     public GameObject optionMenu;
     // Start is called before the first frame update
     void Start()
@@ -18,9 +19,22 @@ public class PauseMan : MonoBehaviour
         
     }
 
-    public void backPressed()
+    public void back()
     {
         optionMenu.SetActive(false);
-        pauseMenu.SetActive(true);
+        holder.SetActive(true);
+    }
+
+    public void Options()
+    {
+        holder.SetActive(false);
+        optionMenu.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
+        optionMenu.SetActive(false);
     }
 }

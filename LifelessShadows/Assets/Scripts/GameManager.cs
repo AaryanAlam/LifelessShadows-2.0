@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject resetPoint;
     public Story1 story1;
     public MainMenuMan2 menuMan;
+    public GameObject pauseMen;
     public bool reset = false;
     public bool inTree = false;
     private ParticleSystem Psystem;
@@ -54,7 +55,8 @@ public class GameManager : MonoBehaviour
         // Goes to Menu
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            menuMan.backPressed();
+            pauseMen.SetActive(true);
+            Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
         }
