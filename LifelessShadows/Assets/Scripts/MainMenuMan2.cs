@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class MainMenuMan2 : MonoBehaviour
 {
-    public GameObject mainMenu;
-    public GameObject optionMenu;
+    public CanvasGroup mainMenu;
+    public CanvasGroup optionMenu;
     public GameObject game;
     public GameObject background;
 
@@ -24,13 +26,15 @@ public class MainMenuMan2 : MonoBehaviour
     {
         volume.Load();
         difficulty.Load();
+        difficulty.setdiff();
         manager.LoadResourceData();
-        mainMenu.SetActive(true);
-        optionMenu.SetActive(false);
+        mainMenu.alpha = 1;
+        optionMenu.alpha = 0;
         game.SetActive(false);
         mainCam.enabled = true;
         gameCam.enabled = false;
         musicOn();
+
     }
 
     // Update is called once per frame
@@ -44,8 +48,8 @@ public class MainMenuMan2 : MonoBehaviour
         Debug.Log("Start Pressed");
         background.SetActive(false);
         game.SetActive(true);
-        optionMenu.SetActive(false);
-        mainMenu.SetActive(false);
+        optionMenu.alpha = 0;
+        mainMenu.alpha = 0;
         mainCam.enabled = false;
         gameCam.enabled = true;
         Invoke("LockCurser", 0.5f);
@@ -57,9 +61,9 @@ public class MainMenuMan2 : MonoBehaviour
     public void optionPressed()
     {
         background.SetActive(true);
-        optionMenu.SetActive(true);
+        optionMenu.alpha = 1;
         game.SetActive(false);
-        mainMenu.SetActive(false);
+        mainMenu.alpha = 0;
         mainCam.enabled = true;
         gameCam.enabled = false;
     }
@@ -67,9 +71,9 @@ public class MainMenuMan2 : MonoBehaviour
     public void backPressed()
     {
         background.SetActive(true);
-        mainMenu.SetActive(true);
+        mainMenu.alpha = 1;
         game.SetActive(false);
-        optionMenu.SetActive(false);
+        optionMenu.alpha = 0;
         mainCam.enabled = true;
         gameCam.enabled = false;
         musicOn();

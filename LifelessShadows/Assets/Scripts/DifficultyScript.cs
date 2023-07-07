@@ -28,6 +28,7 @@ public class DifficultyScript : MonoBehaviour
         else {
             Load();
         }
+        Debug.Log(diff.value);
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class DifficultyScript : MonoBehaviour
         setdiff();
     }
 
-    void setdiff() 
+    public void setdiff() 
     {
         if (diff.value == 1) {
             enemySpawner.numberOfEnemiesToSpawn = Eeasy;

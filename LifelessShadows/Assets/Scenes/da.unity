@@ -513,7 +513,7 @@ PlayableDirector:
   - key: {fileID: 8358229095586588714, guid: dc874958387eba4449ea69d4c0494de8, type: 2}
     value: {fileID: 135071776}
   - key: {fileID: 3401938293438468753, guid: dc874958387eba4449ea69d4c0494de8, type: 2}
-    value: {fileID: 1872882789}
+    value: {fileID: 0}
   - key: {fileID: 7566515771537577335, guid: dc874958387eba4449ea69d4c0494de8, type: 2}
     value: {fileID: 919132147630240987}
   - key: {fileID: -2389928867482020413, guid: dc874958387eba4449ea69d4c0494de8, type: 2}
@@ -3910,8 +3910,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a051020cce62c4341abbf317db229c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 2027276658}
-  optionMenu: {fileID: 1130054725}
+  mainMenu: {fileID: 2027276662}
+  optionMenu: {fileID: 1130054729}
   game: {fileID: 1532059496}
   background: {fileID: 1811188085}
   Music: {fileID: 911409753}
@@ -6258,7 +6258,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914877476}
-  m_LocalRotation: {x: -0.026351286, y: 0.93509674, z: -0.07118204, w: -0.34616888}
+  m_LocalRotation: {x: -0.026351286, y: 0.93509674, z: -0.07118204, w: -0.34616876}
   m_LocalPosition: {x: 11.794823, y: 2.1600037, z: 21.53778}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7607,6 +7607,7 @@ GameObject:
   - component: {fileID: 1130054726}
   - component: {fileID: 1130054728}
   - component: {fileID: 1130054727}
+  - component: {fileID: 1130054729}
   m_Layer: 5
   m_Name: OptionMenu
   m_TagString: OptionMenu
@@ -7678,6 +7679,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130054725}
   m_CullTransparentMesh: 1
+--- !u!225 &1130054729
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130054725}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1133597317
 GameObject:
   m_ObjectHideFlags: 0
@@ -8418,65 +8431,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1249654559
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1249654561}
-  - component: {fileID: 1249654560}
-  m_Layer: 0
-  m_Name: DollyTrack2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1249654560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249654559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a200b19ca1a9685429ed7e043c28e904, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Resolution: 20
-  m_Appearance:
-    pathColor: {r: 0, g: 1, b: 0, a: 1}
-    inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    width: 0.1
-  m_Looped: 0
-  m_Waypoints:
-  - position: {x: 0, y: 0, z: -1.2688276}
-    roll: 0
-  - position: {x: -1.1149902, y: -0.19429111, z: -0.5653362}
-    roll: 5
-  - position: {x: -3.447998, y: -0.16810322, z: -2.338652}
-    roll: 5
-  - position: {x: -8.198242, y: 6.3305397, z: 2.8268383}
-    roll: 5
---- !u!4 &1249654561
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249654559}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.175438, y: 2.1600037, z: 30.46598}
-  m_LocalScale: {x: 1, y: 1, z: 0.88066924}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1872882790}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1251429363
 GameObject:
   m_ObjectHideFlags: 0
@@ -9067,7 +9021,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311559873}
-  m_LocalRotation: {x: -0.0089211995, y: 0.97385234, z: -0.038844578, w: -0.2236588}
+  m_LocalRotation: {x: -0.026351286, y: 0.93509674, z: -0.07118204, w: -0.34616876}
   m_LocalPosition: {x: 11.794823, y: 2.1600037, z: 21.53778}
   m_LocalScale: {x: 0.8836413, y: 0.99906945, z: 0.99712044}
   m_ConstrainProportionsScale: 0
@@ -9095,7 +9049,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 543450651902094944}
-  m_Follow: {fileID: 1417032907}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -9807,55 +9761,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406117664}
   m_CullTransparentMesh: 1
---- !u!1 &1417032906
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1417032907}
-  - component: {fileID: 1417032908}
-  m_Layer: 0
-  m_Name: DollyCart2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1417032907
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417032906}
-  m_LocalRotation: {x: -0.041954946, y: -0.23756589, z: -0.010270977, w: 0.97041065}
-  m_LocalPosition: {x: 7.175438, y: 2.1600037, z: 29.348557}
-  m_LocalScale: {x: 1, y: 1, z: 0.88066924}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1872882790}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1417032908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417032906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99a9c787e5d1bbf48a389834c4a9641c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Path: {fileID: 1249654560}
-  m_UpdateMethod: 0
-  m_PositionUnits: 1
-  m_Speed: 5
-  m_Position: 0
 --- !u!1 &1426610407
 GameObject:
   m_ObjectHideFlags: 0
@@ -10873,7 +10778,6 @@ Transform:
   - {fileID: 543450651902094944}
   - {fileID: 1311559874}
   - {fileID: 914877477}
-  - {fileID: 1872882790}
   m_Father: {fileID: 36822243}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12873,39 +12777,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870804184}
   m_CullTransparentMesh: 1
---- !u!1 &1872882789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1872882790}
-  m_Layer: 0
-  m_Name: dCT-Rack2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1872882790
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872882789}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1249654561}
-  - {fileID: 1417032907}
-  m_Father: {fileID: 1598090139}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1880270655
 GameObject:
   m_ObjectHideFlags: 0
@@ -13582,6 +13453,7 @@ GameObject:
   - component: {fileID: 2027276659}
   - component: {fileID: 2027276661}
   - component: {fileID: 2027276660}
+  - component: {fileID: 2027276662}
   m_Layer: 5
   m_Name: BlackBar
   m_TagString: mainMenu
@@ -13652,6 +13524,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027276658}
   m_CullTransparentMesh: 1
+--- !u!225 &2027276662
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027276658}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2045150994
 GameObject:
   m_ObjectHideFlags: 0
@@ -15938,13 +15822,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig1:LeftHandThumb1'\n\tTransform 'mixamorig1:LeftHandPinky2'\n\tTransform
-    'mixamorig1:RightHand'\n\tTransform 'mixamorig1:LeftHandMiddle2'\n\tTransform
-    'mixamorig1:RightFoot'\n\tTransform 'mixamorig1:Spine1'\n\tTransform 'mixamorig1:RightLeg'\n\tTransform
-    'mixamorig1:RightHandMiddle2'\n\tTransform 'mixamorig1:Hips'\n\tTransform 'mixamorig1:RightArm'\n\tand
-    more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
