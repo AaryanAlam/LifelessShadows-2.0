@@ -29,7 +29,9 @@ public class MainMenuMan2 : MonoBehaviour
         difficulty.setdiff();
         manager.LoadResourceData();
         mainMenu.alpha = 1;
+        mainMenu.blocksRaycasts = true;
         optionMenu.alpha = 0;
+        optionMenu.blocksRaycasts = false;
         game.SetActive(false);
         mainCam.enabled = true;
         gameCam.enabled = false;
@@ -49,7 +51,9 @@ public class MainMenuMan2 : MonoBehaviour
         background.SetActive(false);
         game.SetActive(true);
         optionMenu.alpha = 0;
+        optionMenu.blocksRaycasts = false;
         mainMenu.alpha = 0;
+        mainMenu.blocksRaycasts = false;
         mainCam.enabled = false;
         gameCam.enabled = true;
         Invoke("LockCurser", 0.5f);
@@ -62,8 +66,10 @@ public class MainMenuMan2 : MonoBehaviour
     {
         background.SetActive(true);
         optionMenu.alpha = 1;
+        optionMenu.blocksRaycasts = true;
         game.SetActive(false);
         mainMenu.alpha = 0;
+        mainMenu.blocksRaycasts = false;
         mainCam.enabled = true;
         gameCam.enabled = false;
     }
@@ -72,8 +78,10 @@ public class MainMenuMan2 : MonoBehaviour
     {
         background.SetActive(true);
         mainMenu.alpha = 1;
+        mainMenu.blocksRaycasts = true;
         game.SetActive(false);
         optionMenu.alpha = 0;
+        optionMenu.blocksRaycasts = false;
         mainCam.enabled = true;
         gameCam.enabled = false;
         musicOn();
