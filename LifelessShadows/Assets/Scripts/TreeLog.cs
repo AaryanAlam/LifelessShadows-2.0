@@ -33,11 +33,12 @@ public class TreeLog : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triggered");
-
-        Debug.Log("Pressed");
         trigger = true;
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        trigger = false;
     }
 
     public void DestroyTree()
