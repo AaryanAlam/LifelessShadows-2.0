@@ -56,7 +56,14 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             pauseMen.SetActive(true);
-            Time.timeScale = 0f;
+            if (pauseMen.active == true)
+            {
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
         }
