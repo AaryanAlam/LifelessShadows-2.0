@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,15 +32,30 @@ public class GameManager : MonoBehaviour
 
 
     public float tree;
+    public float iron;
+    public float plastic;
+    public float stone;
+    public float flint;
+    public float scrap;
+    public float copper;
+    public float SOG;
     public Text treeText;
-    public Text foodText;
+    public Text ironText;
+    public Text plasticText;
+    public Text stoneText;
+    public Text flintText;
+    public Text scrapText;
+    public Text copperText;
+    public Text SOGText;
+    //public Text foodText;
 
     public void Start()
     {
         LoadResourceData();
+        LoadMatData();
 
         player = GameObject.FindWithTag("Player");
-        foodText.text = stomachFullness.ToString();
+        //foodText.text = stomachFullness.ToString();
         story1trig.SetActive(false);
 
         StartCoroutine(healthNeed());
@@ -50,8 +66,17 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         // Sets food Text to hunger variable
-        foodText.text = stomachFullness.ToString();
-       
+        //foodText.text = stomachFullness.ToString();
+
+        treeText.text = tree.ToString();
+        ironText.text = iron.ToString();
+        plasticText.text = plastic.ToString();
+        stoneText.text = stone.ToString();
+        flintText.text = flint.ToString();
+        scrapText.text = scrap.ToString();
+        copperText.text = copper.ToString();
+        SOGText.text = SOG.ToString();
+
         // Goes to Menu
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
@@ -68,7 +93,7 @@ public class GameManager : MonoBehaviour
             Cursor.visible = true;
         }
         // Sets Tree text
-        treeText.text = tree.ToString();
+        
 
         // Admin Command Resets Tree
         if (Input.GetKeyDown(KeyCode.Y))
@@ -120,7 +145,31 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("TreeLogs", tree);
     }
 
-    
+    public void SaveMatData()
+    {
+        PlayerPrefs.SetFloat("TreeLogs", tree);
+        PlayerPrefs.SetFloat("Scrap", scrap);
+        PlayerPrefs.SetFloat("Iron", iron);
+        PlayerPrefs.SetFloat("Platic", plastic);
+        PlayerPrefs.SetFloat("Copper", copper);
+        PlayerPrefs.SetFloat("Flint", flint);
+        PlayerPrefs.SetFloat("Stone", stone);
+        PlayerPrefs.SetFloat("SOG", SOG);
+    }
+
+    public void LoadMatData()
+    {
+        tree = PlayerPrefs.GetFloat("TreeLogs", tree);
+        scrap = PlayerPrefs.GetFloat("Scrap", scrap);
+        iron = PlayerPrefs.GetFloat("Iron", iron);
+        plastic = PlayerPrefs.GetFloat("Platic", plastic);
+        copper =PlayerPrefs.GetFloat("Copper", copper);
+        flint = PlayerPrefs.GetFloat("Flint", flint);
+        stone = PlayerPrefs.GetFloat("Stone", stone);
+        SOG = PlayerPrefs.GetFloat("SOG", SOG);
+    }
+
+
 
     public void LoadResourceData()
     {

@@ -16,6 +16,7 @@ public class TreeLog : MonoBehaviour
         {
             Debug.Log("Could not find GameManager object");
         }
+        gameManager.LoadMatData();
     }
 
     // Update is called once per frame
@@ -44,7 +45,34 @@ public class TreeLog : MonoBehaviour
     public void DestroyTree()
     {
         Destroy(gameObject);
-        gameManager.tree += 8;
+        switch(gameObject.name)
+        {
+            case "Treelog(Clone)":
+                gameManager.tree += 8;
+                break;
+            case "Iron(Clone)":
+                gameManager.iron += 3;
+                break;
+            case "Copper(Clone)":
+                gameManager.copper += 4;
+                break;
+            case "SOG(Clone)":
+                gameManager.SOG += 2;
+                break;
+            case "Platic(Clone)":
+                gameManager.plastic += 6;
+                break;
+            case "Flint(Clone)":
+                gameManager.flint += 5;
+                break;
+            case "Scrap(Clone)":
+                gameManager.scrap += 7;
+                break;
+            case "Stone(Clone)":
+                gameManager.stone += 8;
+                break;
+        }
+        gameManager.SaveMatData();
     }
 
 
