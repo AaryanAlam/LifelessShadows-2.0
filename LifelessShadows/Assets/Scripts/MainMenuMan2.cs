@@ -86,6 +86,8 @@ public class MainMenuMan2 : MonoBehaviour
             pauseMan.holder.blocksRaycasts = true;
             optionMenu.alpha = 0f;
             optionMenu.blocksRaycasts = false;
+            background.SetActive(false);
+            game.SetActive(true);
             mainCam.enabled = false;
             gameCam.enabled = true;
         }

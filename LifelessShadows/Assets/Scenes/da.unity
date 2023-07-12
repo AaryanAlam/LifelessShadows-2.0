@@ -3960,6 +3960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 1274097016}
+  MainMenuMan2: {fileID: 449623521}
   mainmenuBackground: {fileID: 1811188085}
   holder: {fileID: 1741217095}
   optionMenu: {fileID: 1130054729}

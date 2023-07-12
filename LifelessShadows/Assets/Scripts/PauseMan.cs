@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class PauseMan : MonoBehaviour
 {
     public Canvas main;
+    public MainMenuMan2 MainMenuMan2;
     public GameObject mainmenuBackground;
     public CanvasGroup holder;
     public CanvasGroup optionMenu;
@@ -24,17 +25,14 @@ public class PauseMan : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            main.enabled = true;
-            holder.alpha = 1f;
-            holder.blocksRaycasts = true;
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-
-        }
-
-        if (main.enabled || optionMenu.alpha == 1f) 
-        {
             Time.timeScale = 0f;
+
+            main.enabled = !main.enabled;
+            holder.alpha = holder.alpha != 1f ? 1f : 0f;
+            holder.blocksRaycasts = !holder.blocksRaycasts;
+            Cursor.lockState = CursorLockMode.Confined ? CursorLockMode ;
+            Cursor.visible = !Cursor.visible;
+
         }
         else
         {
@@ -53,6 +51,9 @@ public class PauseMan : MonoBehaviour
     {
         holder.alpha = 0f;
         holder.blocksRaycasts = false;
+        MainMenuMan2.mainCam.enabled = true;
+        MainMenuMan2.gameCam.enabled = false;
+        MainMenuMan2.game.SetActive(false);
         optionMenu.alpha = 1f;
         optionMenu.blocksRaycasts = true;
         mainmenuBackground.SetActive(true);
