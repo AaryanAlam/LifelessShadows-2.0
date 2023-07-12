@@ -16,6 +16,8 @@ public class MainMenuMan2 : MonoBehaviour
 
     public GameManager manager;
 
+    public PauseMan pauseMan;
+
     public DifficultyScript difficulty;
 
     public VolumeScript volume;
@@ -76,15 +78,29 @@ public class MainMenuMan2 : MonoBehaviour
 
     public void backPressed()
     {
-        background.SetActive(true);
-        mainMenu.alpha = 1;
-        mainMenu.blocksRaycasts = true;
-        game.SetActive(false);
-        optionMenu.alpha = 0;
-        optionMenu.blocksRaycasts = false;
-        mainCam.enabled = true;
-        gameCam.enabled = false;
-        musicOn();
+        if (pauseMan.fromPause == true)
+        {
+            pauseMan.fromPause = false;
+            pauseMan.main.enabled = true;
+            pauseMan.holder.alpha = 1f;
+            pauseMan.holder.blocksRaycasts = true;
+            optionMenu.alpha = 0f;
+            optionMenu.blocksRaycasts = false;
+            mainCam.enabled = false;
+            gameCam.enabled = true;
+        }
+        else if (pauseMan.fromPause == false)
+        {
+            background.SetActive(true);
+            mainMenu.alpha = 1;
+            mainMenu.blocksRaycasts = true;
+            game.SetActive(false);
+            optionMenu.alpha = 0;
+            optionMenu.blocksRaycasts = false;
+            mainCam.enabled = true;
+            gameCam.enabled = false;
+            musicOn();
+        }
     }
 
     public void quitPressed()

@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public GameObject resetPoint;
     public Story1 story1;
     public MainMenuMan2 menuMan;
-    public GameObject pauseMen;
     public bool reset = false;
     public bool inTree = false;
     private ParticleSystem Psystem;
@@ -77,21 +76,7 @@ public class GameManager : MonoBehaviour
         copperText.text = copper.ToString();
         SOGText.text = SOG.ToString();
 
-        // Goes to Menu
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            pauseMen.SetActive(true);
-            if (pauseMen.active == true)
-            {
-                Time.timeScale = 0f;
-            }
-            else
-            {
-                Time.timeScale = 1f;
-            }
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-        }
+
         // Sets Tree text
         
 
