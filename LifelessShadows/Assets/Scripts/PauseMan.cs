@@ -30,8 +30,17 @@ public class PauseMan : MonoBehaviour
             main.enabled = !main.enabled;
             holder.alpha = holder.alpha != 1f ? 1f : 0f;
             holder.blocksRaycasts = !holder.blocksRaycasts;
-            Cursor.lockState = CursorLockMode.Confined ? CursorLockMode ;
-            Cursor.visible = !Cursor.visible;
+            if (main.enabled == true)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            
 
         }
         else
@@ -65,6 +74,8 @@ public class PauseMan : MonoBehaviour
         main.enabled = false;
         holder.alpha = 0f;
         holder.blocksRaycasts = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
     }
 
