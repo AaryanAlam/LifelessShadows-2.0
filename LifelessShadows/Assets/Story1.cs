@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Story1 : MonoBehaviour
@@ -28,7 +29,7 @@ public class Story1 : MonoBehaviour
     {
         Debug.Log("Cut1 started");
         FadeInImage.StartFadeIn();
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3.1f);
         SceneManager.LoadScene("Cut1");
     }
 

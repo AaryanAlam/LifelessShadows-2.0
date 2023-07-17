@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class FadeInImage : MonoBehaviour
 {
-    public float fadeDuration = 2f; // Duration of the fade in seconds
+
+    public float fadeDuration = 3f; // Duration of the fade in seconds
 
     private Image image;
     private CanvasRenderer canvasRenderer;
@@ -21,7 +22,7 @@ public class FadeInImage : MonoBehaviour
     public void StartFadeIn()
     {
         if (isFading) return; // Don't start a new fade if one is already in progress
-
+        image.enabled = true;
         isFading = true;
         timer = 0f;
         currentAlpha = 0f;
@@ -45,6 +46,10 @@ public class FadeInImage : MonoBehaviour
             image.color = new Color(image.color.r, image.color.g, image.color.b, currentAlpha);
             isFading = false;
             enabled = false; // Disable this script
+        }
+        if (timer > fadeDuration)
+        {
+            image.enabled = false;
         }
     }
 }
