@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1028176267}
-  m_IndirectSpecularColor: {r: 0.19559154, g: 0.23698464, b: 0.31058574, a: 1}
+  m_IndirectSpecularColor: {r: 0.19557694, g: 0.23695657, b: 0.310541, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9929,22 +9929,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plank: {fileID: 4006996878391001863, guid: dbbe5b23791553d4d84fccf3e0cb58ee, type: 3}
-  plastic: {fileID: 3975724006668758683, guid: b1ae47549256a2f43b4d0e480a47e259, type: 3}
+  plastic: {fileID: 2271730331106397929, guid: 6b70dc6987775284aa0f22734241af31, type: 3}
   SOG: {fileID: 3847321900187820458, guid: c3b91c5bf00f9e1478adec802d1b881b, type: 3}
   copper: {fileID: 3162972090704791982, guid: 2f1e328a0eeb9924a8b8d25333aff717, type: 3}
-  scrap: {fileID: 6108206875058018099, guid: 6cd418ca445df9b44b57fe0bdc43f744, type: 3}
+  scrap: {fileID: 931050400378524368, guid: acb39e50a944c2e4a99d2d26d7762d3d, type: 3}
   flint: {fileID: 365835651758040377, guid: 2194feb60455cc84c83844eadbed6126, type: 3}
-  iron: {fileID: 2599452633190727404, guid: 9a51f2aaaf078334586485a2d6a5b1fd, type: 3}
+  iron: {fileID: 2168723260864139165, guid: f80e4547f54e34d44b4e64a31c240c0e, type: 3}
   stone: {fileID: 402975233977594921, guid: 8c4cd0d2a0a31ec4194b67857f343bc6, type: 3}
   terrain: {fileID: 2113325514}
-  plankAmount: 2
-  ironAmount: 2
-  stoneAmount: 2
-  flintAmount: 2
-  scrapAmount: 2
-  copperAmount: 2
-  SOGAmount: 2
-  plasticAmount: 2
+  plankAmount: 78
+  ironAmount: 31
+  stoneAmount: 250
+  flintAmount: 230
+  scrapAmount: 50
+  copperAmount: 40
+  SOGAmount: 4
+  plasticAmount: 150
   spreadAmount: 1000
   SOGZone: {fileID: 1740708511}
   x: 0
@@ -11270,12 +11270,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740708511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 166.998, y: 26.757, z: 327.361}
+  m_LocalPosition: {x: 166.998, y: 24.781, z: 327.361}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1741217093
 GameObject:
@@ -23886,7 +23886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8739494600961385702, guid: 213636c013f265d4dbc5b377264cb57d, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8739494600961385702, guid: 213636c013f265d4dbc5b377264cb57d, type: 3}
       propertyPath: m_AnchorMax.x

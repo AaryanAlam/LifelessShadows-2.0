@@ -111,7 +111,7 @@ public class resourceSpawner : MonoBehaviour
             x = Random.Range(0, spreadAmount);
             z = Random.Range(0, spreadAmount);
 
-            Quaternion rotation = Quaternion.Euler(0, x, -90);
+            Quaternion rotation = Quaternion.Euler(0, x, 0);
 
             location = new Vector3(x, 0, z);
 
@@ -163,7 +163,7 @@ public class resourceSpawner : MonoBehaviour
             x = Random.Range(0, spreadAmount);
             z = Random.Range(0, spreadAmount);
 
-            Quaternion rotation = Quaternion.Euler(0, x, -90);
+            Quaternion rotation = Quaternion.Euler(0, x, 0);
 
             location = new Vector3(x, 0, z);
 
